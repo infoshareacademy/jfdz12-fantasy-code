@@ -5,6 +5,7 @@ width: 100%;
 }
 
 .lista{
+    
     list-style: none;
     padding: 10px;
     margin: 0, auto;
@@ -16,12 +17,22 @@ width: 100%;
 }
 
 .lista li{
-    display: inline-flex;
+    
+    
+    text-align: center;
     
 }
 
 .lista a{
+    
     color: white;
     text-decoration: none;
 
+}
+body{
+    height: 1000px;
+}
+
+.lista a:hover{
+    font-weight: bold;
 }
