@@ -10,3 +10,31 @@
 .functions--content--paragraph {
     color: #845d44;
 }
+
+.navig{
+position: sticky; 
+
+width: 100%;   
+}
+
+.lista{
+    list-style: none;
+    padding: 10px;
+    margin: 0, auto;
+    background-color: brown;
+    border: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lista li{
+    display: inline-flex;
+    
+}
+
+.lista a{
+    color: white;
+    text-decoration: none;
+
+}
