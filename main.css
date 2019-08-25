@@ -5,23 +5,34 @@ width: 100%;
 }
 
 .lista{
+    
     list-style: none;
     padding: 10px;
     margin: 0, auto;
     background-color: brown;
     border: 2px;
-    width: 100%;
     display: flex;
     justify-content: space-evenly;
+   
 }
 
 .lista li{
-    display: inline-flex;
+    
+    
+    text-align: center;
     
 }
 
 .lista a{
+    
     color: white;
     text-decoration: none;
 
+}
+body{
+    height: 1000px;
+}
+
+.lista a:hover{
+    font-weight: bold;
 }
