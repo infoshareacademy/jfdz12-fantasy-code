@@ -12,7 +12,8 @@ width: 100%;
     border: 2px;
     width: 100%;
     display: flex;
-justify-content: space-evenly;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .lista li{
