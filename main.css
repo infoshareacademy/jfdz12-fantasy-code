@@ -1,16 +1,3 @@
-.functions--content {
-    background-color: #463431;
-    text-align: center;
-}
-
-.functions--content--header {
-    color: #b7922c;
-}
-
-.functions--content--paragraph {
-    color: #845d44;
-}
-
 .navig{
 position: sticky; 
 
@@ -37,4 +24,17 @@ width: 100%;
     color: white;
     text-decoration: none;
 
+}
+
+.functions--content {
+    background-color: #463431;
+    text-align: center;
+}
+
+.functions--content--header {
+    color: #b7922c;
+}
+
+.functions--content--paragraph {
+    color: #845d44;
 }
