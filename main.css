@@ -10,9 +10,9 @@ width: 100%;
     margin: 0, auto;
     background-color: brown;
     border: 2px;
-    width: 100%;
     display: flex;
     justify-content: space-evenly;
+   
 }
 
 .lista li{
