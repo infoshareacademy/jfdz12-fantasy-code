@@ -36,3 +36,10 @@ body{
 .lista a:hover{
     font-weight: bold;
 }
+
+@media screen and (max-width: 1024px) {
+    .scale {
+          object-fit: cover;
+          max-height: 50%;
+          height: 50vh!important;
+    }
