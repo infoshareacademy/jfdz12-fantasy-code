@@ -42,17 +42,43 @@ width: 100%;
     background-color: #f1f1f1;
     margin: 1rem;
     width: 45vw;
+    border: solid #b7922c;
+    border-radius: 40rem;
 }
 
 .functions--img {
-    width: 50%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .functions--content--header {
     color: #b7922c;
+    margin-top: 4rem;
 }
 
 .functions--content--paragraph {
     color: #845d44;
+    max-width: 50%;
+    margin: 1rem auto;
+}
+.test-img-container--1 {
+    width: 200px;
+    height: 200px;
+    background-image: url("./Ikony/kufer2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.test-img-container--2 {
+    width: 200px;
+    height: 200px;
+    background-image: url("./Ikony/flgi.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
 }
