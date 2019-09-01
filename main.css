@@ -9,7 +9,7 @@ width: 100%;
     list-style: none;
     padding: 10px;
     margin: 0, auto;
-    background-color: brown;
+    background-color: #b7922c;
     border: 2px;
     display: flex;
     justify-content: space-evenly;
@@ -25,7 +25,7 @@ width: 100%;
 
 .lista a{
     
-    color: white;
+    color: #463431;
     text-decoration: none;
 
 }
@@ -43,3 +43,4 @@ body{
           max-height: 50%;
           height: 50vh!important;
     }
+}
