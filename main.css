@@ -1,7 +1,6 @@
 .navig{
-position: sticky; 
-
-width: 100%;   
+    position: sticky; 
+    width: 100%;   
 }
 
 .lista{
@@ -13,7 +12,7 @@ width: 100%;
     border: 2px;
     display: flex;
     justify-content: space-evenly;
-   
+    
 }
 
 .lista li{
@@ -28,16 +27,16 @@ width: 100%;
     text-decoration: none;
 }
 .carousel-caption, .container-fluid {
-    font-family: LABRIT;
+    font-family: ‘LABRIT’;
     
     -webkit-text-stroke: 1px black;
-   color: white;
-   text-shadow:
-       3px 3px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
+    color: white;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 
@@ -47,6 +46,7 @@ width: 100%;
 }
 
 .carousel-paragraph {
+    font-family: ‘Assassin’;
     font-size: 3rem
 }
 
@@ -74,19 +74,19 @@ width: 100%;
 @font-face {
     font-family: ‘Assassin’;
     src:
-    url('Assassin.ttf');
+    url('fonts/Assassin.ttf');
 }
 
 @font-face {
     font-family: ‘LABRIT’;
     src:
-    url('LABRIT.ttf');
+    url('fonts/LABRIT.ttf');
 }
 
 @font-face {
     font-family: ‘TRAJANUS’;
     src:
-    url('TRAJANUS.ttf');
+    url('fonts/TRAJANUS.ttf');
 }
 body{
     height: 1000px;
@@ -98,8 +98,8 @@ body{
 
 @media screen and (max-width: 1024px) {
     .scale {
-          object-fit: cover;
-          max-height: 50%;
-          height: 50vh!important;
+            object-fit: cover;
+            max-height: 50%;
+            height: 50vh!important;
     }
 }
