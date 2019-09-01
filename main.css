@@ -29,6 +29,39 @@ width: 100%;
     text-decoration: none;
 
 }
+@font-face {
+    font-family: ‘Aleo-Bold’;
+    src:
+    url('fonts/Aleo-Bold.otf');
+    src:
+    url('fonts/Aleo-Bolditalic.otf');
+    src:
+    url('fonts/Aleo-Italic.otf');
+    src:
+    url('fonts/Aleo-Light.otf');
+    src:
+    url('fonts/Aleo-LightItalic.otf');
+    src:
+    url('fonts/Aleo-Regular.otf');
+    }
+
+@font-face {
+    font-family: ‘Assassin’;
+    src:
+    url('Assassin.ttf');
+}
+
+@font-face {
+    font-family: ‘LABRIT’;
+    src:
+    url('LABRIT.ttf');
+}
+
+@font-face {
+    font-family: ‘TRAJANUS’;
+    src:
+    url('TRAJANUS.ttf');
+}
 body{
     height: 1000px;
 }
@@ -43,3 +76,4 @@ body{
           max-height: 50%;
           height: 50vh!important;
     }
+}
