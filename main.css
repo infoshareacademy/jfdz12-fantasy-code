@@ -5,22 +5,26 @@ width: 100%;
 }
 
 .lista{
+    
     list-style: none;
     padding: 10px;
     margin: 0, auto;
     background-color: brown;
     border: 2px;
-    width: 100%;
     display: flex;
     justify-content: space-evenly;
+   
 }
 
 .lista li{
-    display: inline-flex;
+    
+    
+    text-align: center;
     
 }
 
 .lista a{
+    
     color: white;
     text-decoration: none;
 
@@ -57,4 +61,19 @@ width: 100%;
     font-family: ‘TRAJANUS’;
     src:
     url('TRAJANUS.ttf');
+}
+body{
+    height: 1000px;
+}
+
+.lista a:hover{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+    .scale {
+          object-fit: cover;
+          max-height: 50%;
+          height: 50vh!important;
+    }
 }
