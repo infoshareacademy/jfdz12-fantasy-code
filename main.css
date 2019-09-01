@@ -1,29 +1,95 @@
 .navig{
-position: sticky; 
-
-width: 100%;   
+    position: sticky; 
+    width: 100%;   
 }
 
-.lista{
+.lista{ 
     list-style: none;
     padding: 10px;
     margin: 0, auto;
     background-color: brown;
     border: 2px;
-    width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
 .lista li{
-    display: inline-flex;
+    text-align: center;
     
 }
 
 .lista a{
     color: white;
     text-decoration: none;
+}
 
+.carousel-caption, .container-fluid {
+    font-family: ‘LABRIT’;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+
+.carousel-heading {
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.carousel-paragraph {
+    font-family: ‘Assassin’;
+    font-size: 3rem
+}
+
+.container-fluid {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: ‘Aleo-Bold’;
+    src:
+    url('fonts/Aleo-Bold.otf');
+    src:
+    url('fonts/Aleo-Bolditalic.otf');
+    src:
+    url('fonts/Aleo-Italic.otf');
+    src:
+    url('fonts/Aleo-Light.otf');
+    src:
+    url('fonts/Aleo-LightItalic.otf');
+    src:
+    url('fonts/Aleo-Regular.otf');
+    }
+
+@font-face {
+    font-family: ‘Assassin’;
+    src:
+    url('fonts/Assassin.ttf');
+}
+
+@font-face {
+    font-family: ‘LABRIT’;
+    src:
+    url('fonts/LABRIT.ttf');
+}
+
+@font-face {
+    font-family: ‘TRAJANUS’;
+    src:
+    url('fonts/TRAJANUS.ttf');
+}
+body{
+    height: 1000px;
+}
+
+.lista a:hover{
+    font-weight: bold;
 }
 
 .functions--content {
@@ -81,4 +147,11 @@ width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+    .scale {
+            object-fit: cover;
+            max-height: 50%;
+            height: 50vh!important;
+    }
 }
