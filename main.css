@@ -65,14 +65,14 @@
     url('fonts/Aleo-LightItalic.otf');
     src:
     url('fonts/Aleo-Regular.otf');
-    }
+}
 
 @font-face {
     font-family: ‘Assassin’;
     src:
     url('fonts/Assassin.ttf');
 }
-
+S
 @font-face {
     font-family: ‘LABRIT’;
     src:
@@ -94,8 +94,30 @@ body{
 
 @media screen and (max-width: 1024px) {
     .scale {
-            object-fit: cover;
-            max-height: 50%;
-            height: 50vh!important;
+        object-fit: cover;
+        max-height: 50%;
+        height: 50vh!important;
     }
+    
+    .button-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.carousel-image {
+    position: relative;
+}
+
+.button-icon {
+    z-index: 10;
+    /* display: inline-flexbox; */
+    position: absolute;
+    top: 1%;
+    left 1%;
+}
+
+.button-image {
+    width: 120px;
+    height: 120px;
 }
