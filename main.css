@@ -19,12 +19,7 @@
 }
 
 .lista a{
-<<<<<<< HEAD
-    
-    color: #463431;
-=======
     color: white;
->>>>>>> 2bc800346bc75a7c4047ef2e1589d9223d5177a2
     text-decoration: none;
 }
 
@@ -99,14 +94,8 @@ body{
 
 @media screen and (max-width: 1024px) {
     .scale {
-<<<<<<< HEAD
-          object-fit: cover;
-          max-height: 50%;
-          height: 50vh!important;
-=======
             object-fit: cover;
             max-height: 50%;
             height: 50vh!important;
->>>>>>> 2bc800346bc75a7c4047ef2e1589d9223d5177a2
     }
 }
