@@ -50,7 +50,7 @@
 }
 
 .carousel-paragraph {
-    font-family: ‘Assassin’, sans-serif;
+    font-family: ‘Assassin’;
     font-size: 3rem
 }
 
@@ -62,35 +62,35 @@
 @font-face {
     font-family: ‘Aleo-Bold’, sans-serif;
     src:
-    url('fonts/Aleo-Bold.otf');
+    url('/fonts/Aleo-Bold.otf');
     src:
-    url('fonts/Aleo-Bolditalic.otf');
+    url('/fonts/Aleo-Bolditalic.otf');
     src:
-    url('fonts/Aleo-Italic.otf');
+    url('/fonts/Aleo-Italic.otf');
     src:
-    url('fonts/Aleo-Light.otf');
+    url('/fonts/Aleo-Light.otf');
     src:
-    url('fonts/Aleo-LightItalic.otf');
+    url('/fonts/Aleo-LightItalic.otf');
     src:
-    url('fonts/Aleo-Regular.otf');
+    url('/fonts/Aleo-Regular.otf');
     }
 
 @font-face {
     font-family: ‘Assassin’, sans-serif;
     src:
-    url('fonts/Assassin.ttf');
+    url('/fonts/Assassin.ttf');
 }
 
 @font-face {
     font-family: ‘LABRIT’, sans-serif;
     src:
-    url('fonts/LABRIT.ttf');
+    url('/fonts/LABRIT.ttf');
 }
 
 @font-face {
     font-family: ‘TRAJANUS’, sans-serif;
     src:
-    url('fonts/TRAJANUS.ttf');
+    url('/fonts/TRAJANUS.ttf');
 }
 body{
     height: 1000px;
