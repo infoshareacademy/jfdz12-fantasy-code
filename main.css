@@ -4,6 +4,9 @@
     margin: 0 auto;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 
 .navig{
@@ -11,7 +14,7 @@
     width: 100%;   
 }
 
-.lista{ 
+.list{ 
     list-style: none;
     padding: 10px;
     margin: 0, auto;
@@ -21,12 +24,12 @@
     justify-content: space-evenly;
 }
 
-.lista li{
+.list li{
     text-align: center;
     
 }
 
-.lista a{
+.list a{
     color: white;
     text-decoration: none;
 }
@@ -93,11 +96,49 @@
     url('/fonts/TRAJANUS.ttf');
 }
 body{
-    height: 1000px;
+    background: url();
 }
 
 .lista a:hover{
     font-weight: bold;
+}
+
+.functions--content {
+    background-color: #463431;
+    text-align: center;
+}
+
+.functions--content--container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.functions--content--container > div {
+    background-color: #f1f1f1;
+    margin: 1rem;
+    width: 45vw;
+    border: solid #b7922c;
+    border-radius: 40rem;
+}
+
+.functions--img {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.functions--content--header {
+    color: #b7922c;
+    margin-top: 4rem;
+}
+
+.functions--content--paragraph {
+    color: #845d44;
+    max-width: 50%;
+    margin: 1rem auto;
 }
 
 @media screen and (max-width: 1024px) {
@@ -141,6 +182,10 @@ body{
 .information-authors {
     margin: 0 0 4rem 0;
     border: 0 0 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .personal-data {
@@ -158,3 +203,36 @@ body{
 }
 
 
+.section-subscribe {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    }
+    
+    .section-subscribe-title {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0px 0px;
+    
+    }
+    
+    .email{
+    width: 400px;
+    height: 50px;
+    font-size: 14px;
+    color: lightgray;
+    padding: 0px 19px;
+    }
+    
+    .submit-button{
+    height: 50px;
+    width: 100px;
+    background-color: lightsalmon;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    }
