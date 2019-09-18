@@ -1,20 +1,19 @@
-.container-block{
+.container-block {
     width: 80vw;
     background-color: brown;
     margin: 0 auto;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-
-.navig{
+.navig {
     position: sticky; 
     width: 100%;   
 }
 
-.list{ 
+.list { 
     list-style: none;
     padding: 10px;
     margin: 0, auto;
@@ -24,17 +23,16 @@ html{
     justify-content: space-evenly;
 }
 
-.list li{
+.list li {
     text-align: center;
-    
 }
 
-.list a{
+.list a {
     color: white;
     text-decoration: none;
 }
 
-.carousel-caption, .container-fluid {
+.carousel-caption, .container-fluid, .section-authors-title, .functions--content--header {
     font-family: ‘LABRIT’, sans-serif;
     -webkit-text-stroke: 1px black;
     color: white;
@@ -45,7 +43,6 @@ html{
     -1px 1px 0 #000,
     1px 1px 0 #000;
 }
-
 
 .carousel-heading {
     font-size: 5rem;
@@ -76,7 +73,7 @@ html{
     url('fonts/Aleo-LightItalic.otf');
     src:
     url('fonts/Aleo-Regular.otf');
-    }
+}
 
 @font-face {
     font-family: ‘Assassin’, sans-serif;
@@ -95,6 +92,7 @@ html{
     src:
     url('fonts/TRAJANUS.ttf');
 }
+
 body{
     background: url();
 }
@@ -106,6 +104,7 @@ body{
 .functions--content {
     background-color: #463431;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .functions--content--container {
@@ -116,9 +115,9 @@ body{
 }
 
 .functions--content--container > div {
-    background-color: #f1f1f1;
+    background-color: white;
     margin: 1rem;
-    width: 45vw;
+    width: 35vw;
     border: solid #b7922c;
     border-radius: 40rem;
 }
@@ -131,14 +130,12 @@ body{
 }
 
 .functions--content--header {
-    color: #b7922c;
-    margin-top: 4rem;
+    margin: 2rem 3rem 0 3rem;
 }
 
 .functions--content--paragraph {
-    color: #845d44;
     max-width: 50%;
-    margin: 1rem auto;
+    margin: 2rem auto;
 }
 
 @media screen and (max-width: 1024px) {
@@ -152,33 +149,19 @@ body{
 /* AUTHORS - CSS code*/
 
 .section-authors {
-    
     padding: 0;
-    
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
 }
 
-.section-authors-title {
-    font-family: ‘LABRIT’, sans-serif;
-    -webkit-text-stroke: 1px black;
-    color: white;
-    text-shadow:
-    3px 3px 0 #000,
-    -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-}
-
-.personal-container{
+.personal-container {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 .information-authors {
     margin: 0 0 4rem 0;
     border: 0 0 1rem 0;
@@ -199,9 +182,7 @@ body{
     border-radius: 1.5rem;
     font-size: 1rem; 
     text-align: center;
-
 }
-
 
 .section-subscribe {
     height: 500px;
@@ -211,28 +192,27 @@ body{
     color: white;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    }
+}
     
-    .section-subscribe-title {
+.section-subscribe-title {
     font-size: 40px;
     font-weight: normal;
-    margin: 0px 0px;
+    margin: 0px 0px;    
+}
     
-    }
-    
-    .email{
+.email {
     width: 400px;
     height: 50px;
     font-size: 14px;
     color: lightgray;
     padding: 0px 19px;
-    }
+}
     
-    .submit-button{
+.submit-button {
     height: 50px;
     width: 100px;
     background-color: lightsalmon;
     text-transform: uppercase;
     color: white;
     font-weight: bold;
-    }
+}
