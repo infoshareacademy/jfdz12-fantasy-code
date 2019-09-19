@@ -1,6 +1,6 @@
 .container-block {
     width: 80vw;
-    background-color: brown;
+    background: url('/wood.jpg') #311915b4 no-repeat center center;
     margin: 0 auto;
 }
 
@@ -113,7 +113,7 @@ main{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    align-content: center;
+    align-content: center
 }
 
 .functions--content--container > div {
