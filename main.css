@@ -22,6 +22,7 @@ html{
     border: 2px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: nowrap;
 }
 
 .list li{
@@ -237,4 +238,23 @@ main{
     text-transform: uppercase;
     color: white;
     font-weight: bold;
+    }
+
+    .nav-img {
+        display: none;
+    }
+
+    @media screen and (max-width: 575px) {
+        .nav-text {
+            display: none;
+        }
+        .nav-img {
+            display: flex;
+            width: 50px;
+            height: 50px;
+        }
+
+        .list {
+            flex-wrap: nowrap;
+        }
     }
