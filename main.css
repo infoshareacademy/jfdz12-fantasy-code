@@ -117,9 +117,9 @@ main{
 }
 
 .functions--content--container > div {
-    background-color: #f1f1f1;
+    background-color: white;
     margin: 1rem;
-    width: 45vw;
+    width: 35vw;
     border: solid #b7922c;
     border-radius: 40rem;
 }
