@@ -35,7 +35,7 @@ html{
 }
 
 .carousel-caption, .container-fluid {
-    font-family: ‘LABRIT’, sans-serif;
+    font-family: ‘LABRIT’;
     -webkit-text-stroke: 1px black;
     color: white;
     text-shadow:
@@ -53,7 +53,7 @@ html{
 }
 
 .carousel-paragraph {
-    font-family: ‘Assassin’, sans-serif;
+    font-family: ‘Assassin’;
     font-size: 3rem
 }
 
@@ -63,40 +63,42 @@ html{
 }
 
 @font-face {
-    font-family: ‘Aleo-Bold’, sans-serif;
+    font-family: ‘Aleo-Bold’;
     src:
-    url('fonts/Aleo-Bold.otf');
+    url('/fonts/Aleo-Bold.otf');
     src:
-    url('fonts/Aleo-Bolditalic.otf');
+    url('/fonts/Aleo-Bolditalic.otf');
     src:
-    url('fonts/Aleo-Italic.otf');
+    url('/fonts/Aleo-Italic.otf');
     src:
-    url('fonts/Aleo-Light.otf');
+    url('/fonts/Aleo-Light.otf');
     src:
-    url('fonts/Aleo-LightItalic.otf');
+    url('/fonts/Aleo-LightItalic.otf');
     src:
-    url('fonts/Aleo-Regular.otf');
+    url('/fonts/Aleo-Regular.otf');
     }
 
 @font-face {
-    font-family: ‘Assassin’, sans-serif;
+    font-family: ‘Assassin’;
     src:
-    url('fonts/Assassin.ttf');
+    url('/fonts/Assassin.ttf');
 }
 
 @font-face {
-    font-family: ‘LABRIT’, sans-serif;
+    font-family: ‘LABRIT’;
     src:
-    url('fonts/LABRIT.ttf');
+    url('/fonts/LABRIT.ttf');
 }
 
 @font-face {
-    font-family: ‘TRAJANUS’, sans-serif;
+    font-family: ‘TRAJANUS’;
     src:
-    url('fonts/TRAJANUS.ttf');
+    url('/fonts/TRAJANUS.ttf');
 }
-body{
-    background: url();
+
+main{
+    background: url('fmap.png') no-repeat center center fixed;
+
 }
 
 .lista a:hover{
@@ -162,9 +164,10 @@ body{
 }
 
 .section-authors-title {
-    font-family: ‘LABRIT’, sans-serif;
+    font-family: ‘LABRIT’;
     -webkit-text-stroke: 1px black;
     color: white;
+    width: 100%;
     text-shadow:
     3px 3px 0 #000,
     -1px -1px 0 #000,  
