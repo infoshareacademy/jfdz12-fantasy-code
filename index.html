@@ -14,7 +14,7 @@
   </title>
 </head>
 
-<body>
+<body >
   <header id="hero">
     <div
       id="carouselIndicators"
@@ -145,27 +145,26 @@
       <li
         class="list_home col-md-3">
         <a
-          href="#hero">HOME</a>
+          href="#hero" onClick="scrollTo()" >HOME</a>
       </li>
       <li
         class="list_about col-md-3">
         <a
-          href="#function">ABOUT</a>
+          href="#function" onClick="scrollTo()">ABOUT</a>
       </li>
       <li
         class="list_authors col-md-3">
-        <a
-          href="#authors">AUTHORS</a>
+        <p onclick="scrollTo()">AUTHORS</p>
       </li>
       <li
         class="list_extras col-md-3">
         <a
-          href="#extras">EXTRAS</a>
+          href="#extras" onClick="scrollTo()">EXTRAS</a>
       </li>
     </ul>
   </nav>
 
-  <section class="functions--content">
+  <section class="functions--content" id="function">
     <h1 class="functions--content--header">Functions</h1>
     <div class="functions--content--container">
       <div>
@@ -201,7 +200,7 @@
       </div> 
   </section>
 
-  <section class="container-block section-authors">
+  <section class="container-block section-authors" id="authors">
     <div class="section-authors-title">
       <div>
         <h1 class="carousel-heading">AUTHORS</h1>
@@ -272,6 +271,7 @@
       </div>
     </div>
   </section>
+  <script src="main.js"></script>
   <script
     src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
