@@ -4,9 +4,9 @@
     margin: 0 auto;
 }
 
-/* html{
+ html{
     scroll-behavior: smooth;
-} */
+} 
 
 
 .navig{
@@ -22,6 +22,7 @@
     border: 2px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: nowrap; 
 }
 
 .list li{
@@ -36,11 +37,7 @@
 }
 
 .carousel-caption, .container-fluid {
-<<<<<<< HEAD
-    font-family: ‘LABRIT’, ;
-=======
     font-family: ‘LABRIT’;
->>>>>>> 2618cde36eee61bc019501c02070f0a81e57f937
     -webkit-text-stroke: 1px black;
     color: white;
     text-shadow:
@@ -58,11 +55,7 @@
 }
 
 .carousel-paragraph {
-<<<<<<< HEAD
-    font-family: ‘Assassin’, ;
-=======
     font-family: ‘Assassin’;
->>>>>>> 2618cde36eee61bc019501c02070f0a81e57f937
     font-size: 3rem
 }
 
@@ -72,11 +65,7 @@
 }
 
 @font-face {
-<<<<<<< HEAD
-    font-family: ‘Aleo-Bold’,;
-=======
     font-family: ‘Aleo-Bold’;
->>>>>>> 2618cde36eee61bc019501c02070f0a81e57f937
     src:
     url('/fonts/Aleo-Bold.otf');
     src:
@@ -92,42 +81,27 @@
     }
 
 @font-face {
-<<<<<<< HEAD
-    font-family: ‘Assassin’, ;
-=======
     font-family: ‘Assassin’;
->>>>>>> 2618cde36eee61bc019501c02070f0a81e57f937
     src:
     url('/fonts/Assassin.ttf');
 }
 
 @font-face {
-<<<<<<< HEAD
-    font-family: ‘LABRIT’, ;
-=======
     font-family: ‘LABRIT’;
->>>>>>> 2618cde36eee61bc019501c02070f0a81e57f937
     src:
     url('/fonts/LABRIT.ttf');
 }
 
 @font-face {
-<<<<<<< HEAD
-    font-family: ‘TRAJANUS’, ;
-=======
     font-family: ‘TRAJANUS’;
->>>>>>> 2618cde36eee61bc019501c02070f0a81e57f937
     src:
     url('/fonts/TRAJANUS.ttf');
 }
-<<<<<<< HEAD
-=======
 
 main{
     background: url('fmap.png') no-repeat center center fixed;
 
 }
->>>>>>> 2618cde36eee61bc019501c02070f0a81e57f937
 
 
 
@@ -232,8 +206,10 @@ main{
 
 }
 
+/* section subscribe  */
 
 .section-subscribe {
+    font-family: ‘Assassin’;
     height: 500px;
     display: flex;
     align-items: center;
@@ -241,12 +217,15 @@ main{
     color: white;
     margin-top: 2rem;
     margin-bottom: 2rem;
+   
     }
     
     .section-subscribe-title {
     font-size: 40px;
     font-weight: normal;
     margin: 0px 0px;
+    font-size: 2rem;
+    font-weight: 900;
     
     }
     
