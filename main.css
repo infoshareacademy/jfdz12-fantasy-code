@@ -4,11 +4,7 @@
     margin: 0 auto;
 }
 
-<<<<<<< HEAD
- html{
-=======
 html {
->>>>>>> 4c85397586b9592dd359ff45d586b90fee7bb064
     scroll-behavior: smooth;
 } 
 
@@ -204,11 +200,6 @@ main{
     text-align: center;
 }
 
-<<<<<<< HEAD
-/* section subscribe  */
-
-=======
->>>>>>> 4c85397586b9592dd359ff45d586b90fee7bb064
 .section-subscribe {
     font-family: ‘Assassin’;
     height: 500px;
@@ -218,26 +209,13 @@ main{
     color: white;
     margin-top: 2rem;
     margin-bottom: 2rem;
-<<<<<<< HEAD
-   
-    }
-=======
 }
->>>>>>> 4c85397586b9592dd359ff45d586b90fee7bb064
     
 .section-subscribe-title {
     font-size: 40px;
     font-weight: normal;
-<<<<<<< HEAD
-    margin: 0px 0px;
-    font-size: 2rem;
-    font-weight: 900;
-    
-    }
-=======
     margin: 0px 0px;    
 }
->>>>>>> 4c85397586b9592dd359ff45d586b90fee7bb064
     
 .email {
     width: 400px;
