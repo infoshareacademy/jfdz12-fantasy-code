@@ -1,6 +1,6 @@
 .container-block{
     width: 80vw;
-    background-color: brown;
+    background: url('/wood.jpg') #311915b4 no-repeat center center;
     margin: 0 auto;
 }
 
