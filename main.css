@@ -95,8 +95,10 @@ html{
     src:
     url('/fonts/TRAJANUS.ttf');
 }
+
 main{
     background: url('fmap.png') no-repeat center center fixed;
+
 }
 
 .lista a:hover{
