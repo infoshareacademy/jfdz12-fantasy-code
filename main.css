@@ -34,7 +34,7 @@ html{
     text-decoration: none;
 }
 
-.carousel-caption, .container-fluid {
+.carousel-caption, .container-fluid, .section-authors-title, .functions--content--header {
     font-family: ‘LABRIT’;
     -webkit-text-stroke: 1px black;
     color: white;
