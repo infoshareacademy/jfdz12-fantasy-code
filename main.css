@@ -249,5 +249,5 @@ main {
     .list {
         flex-wrap: nowrap;
     }
-    .container-block {}
+    /* .container-block {} */
 }
