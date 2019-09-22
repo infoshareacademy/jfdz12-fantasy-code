@@ -39,7 +39,9 @@ html {
     text-decoration: none;
 }
 
+
 .carousel-caption, .container-fluid, .section-authors-title, .functions--content--header, .extras--content--header {
+
     font-family: ‘LABRIT’;
     -webkit-text-stroke: 1px black;
     color: white;
@@ -91,8 +93,10 @@ main {
     background: url('./img/fmap.png') no-repeat center center fixed;
 }
 
+
 .functions--content, .extras--content {
     background-color: #463431;
+
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -128,6 +132,7 @@ main {
     margin: 2rem auto;
 }
 
+
 @media screen and (max-width: 1024px) {
     .scale {
         object-fit: cover;
@@ -135,6 +140,7 @@ main {
         height: 50vh!important;
     }
 }
+
 
 /* AUTHORS - CSS code*/
 
@@ -242,6 +248,36 @@ main {
     display: none;
 }
 
+
+@media screen and (max-width: 1024px) {
+    .scale {
+        object-fit: cover;
+        max-height: 50%;
+        height: 50vh!important;
+    }
+
+    .functions--content--header {
+        font-size: 1.75rem;
+        margin: 2rem 3rem 0 3rem;
+    }
+
+    .carousel-heading {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    .functions--content--container > div {
+        border-radius: 20rem;
+    }
+    
+    .functions--img {
+        width: 80%;
+        height: 80%;
+        min-width: 50px;
+        min-height: 50px;
+    }
+}
+
 @media screen and (max-width: 650px) {
     .nav-img {
         display: flex;
@@ -249,11 +285,45 @@ main {
         width: 75px;
         height: 75px;
     }
+    
     .nav-text {
         display: none;
     }
+    
     .list {
         flex-wrap: nowrap;
+    } 
+
+    .functions--content--header {
+        font-size: 1.5rem;
+        margin: 2rem 3rem 0 3rem;
     }
-    /* .container-block {} */
+    
+    .carousel-heading {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .functions--content--container > div {
+        width: 50vw;
+        border-radius: 8rem;
+    }
+
+    .functions--img {
+        width: 50%;
+        height: 40%;
+        min-width: 50px;
+        min-height: 50px;
+    }
+
+    .functions--content--paragraph {
+        font-size: 0.9rem;
+        max-width: 75%;
+        margin: 1rem auto 2rem;
+    }
+
+    /* .container-block {
+        
+    } */
+
 }
