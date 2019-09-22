@@ -1,6 +1,6 @@
 .container-block {
     width: 80vw;
-    background: url('/wood.jpg') #311915b4 no-repeat center center;
+    background: url('./img/wood.jpg') #311915b4 no-repeat center center;
     margin: 0 auto;
 }
 
@@ -98,7 +98,7 @@ html {
 
 
 main{
-    background: url('fmap.png') no-repeat center center fixed;
+    background: url('./img/fmap.png') no-repeat center center fixed;
 }
 
 
