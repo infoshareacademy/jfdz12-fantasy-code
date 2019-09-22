@@ -214,11 +214,18 @@ main {
 
 .section-subscribe-text {
     font-size: 2rem;
-    text-align: center;
+   
+    
 }
+
 
 .section-subscribe-content {
     max-width: 40vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .subscribe-inputs {
@@ -321,9 +328,5 @@ main {
         max-width: 75%;
         margin: 1rem auto 2rem;
     }
-
-    /* .container-block {
-        
-    } */
 
 }
