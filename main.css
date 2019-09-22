@@ -139,12 +139,6 @@ main {
         max-height: 50%;
         height: 50vh!important;
     }
-<<<<<<< HEAD
-
-
-    
-=======
->>>>>>> b70f4300f7b97b2141d5aab056a3145ba43bebf9
 }
 
 
@@ -220,11 +214,18 @@ main {
 
 .section-subscribe-text {
     font-size: 2rem;
-    text-align: center;
+   
+    
 }
+
 
 .section-subscribe-content {
     max-width: 40vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .subscribe-inputs {
@@ -285,26 +286,6 @@ main {
 }
 
 @media screen and (max-width: 650px) {
-<<<<<<< HEAD
-        .nav-img {
-            display: flex;
-            justify-content: center;
-            width: 75px;
-            height: 75px;
-
-        }
-        .nav-text{
-            display: none;
-        }
-           .list{
-               flex-wrap: nowrap;
-
-           }
-        .   
-        .container-block {
-            /* wstawic fixed do obrazka contenera */
-        }
-=======
     .nav-img {
         display: flex;
         justify-content: center;
@@ -341,7 +322,6 @@ main {
         min-width: 50px;
         min-height: 50px;
     }
->>>>>>> b70f4300f7b97b2141d5aab056a3145ba43bebf9
 
     .functions--content--paragraph {
         font-size: 0.9rem;
@@ -349,11 +329,3 @@ main {
         margin: 1rem auto 2rem;
     }
 
-<<<<<<< HEAD
-=======
-    /* .container-block {
-        
-    } */
-
-}
->>>>>>> b70f4300f7b97b2141d5aab056a3145ba43bebf9
