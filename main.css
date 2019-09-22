@@ -104,7 +104,6 @@ main{
 }
 
 .functions--content {
-    background-color: #463431;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -138,6 +137,24 @@ main{
 .functions--content--paragraph {
     max-width: 50%;
     margin: 2rem auto;
+}
+
+@media screen and (max-width: 600px) {
+    .functions--img {
+        width: 60%;
+        height: 60%;
+        min-width: 50px;
+        min-height: 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .functions--img {
+        width: 75%;
+        height: 75%;
+        min-width: 50px;
+        min-height: 50px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
