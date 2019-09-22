@@ -213,6 +213,7 @@ main{
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 3rem;
+    flex-wrap: wrap;
 }
     
 .section-subscribe-title {
