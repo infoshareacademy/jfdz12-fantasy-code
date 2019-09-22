@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-}
+} 
 
 .navig {
     position: sticky; 
@@ -15,12 +15,13 @@ html {
 
 .list { 
     list-style: none;
-    padding: 10px;
+    padding: unset;
     margin: 0, auto;
     background-color: brown;
     border: 2px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: nowrap; 
 }
 
 .list li {
@@ -30,10 +31,11 @@ html {
 .list a {
     color: white;
     text-decoration: none;
+    
 }
 
 
-.carousel-caption, .container-fluid, .section-authors-title, .functions--content--header {
+.carousel-caption, .container-fluid, .section-authors-title, .functions--content--header  {
     font-family: ‘LABRIT’;
     -webkit-text-stroke: 1px black;
     color: white;
@@ -99,9 +101,7 @@ main{
     background: url('./img/fmap.png') no-repeat center center fixed;
 }
 
-.lista a:hover{
-    font-weight: bold;
-}
+
 
 .functions--content {
     text-align: center;
@@ -163,6 +163,9 @@ main{
             max-height: 50%;
             height: 50vh!important;
     }
+
+
+    .
 }
 
 /* AUTHORS - CSS code*/
@@ -186,6 +189,7 @@ main{
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+    width: 100%;
 }
 
 .personal-container{
@@ -217,6 +221,7 @@ main{
 }
 
 .section-subscribe {
+    font-family: ‘Assassin’;
     height: 500px;
     display: flex;
     align-items: center;
@@ -224,18 +229,43 @@ main{
     color: white;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    padding: 3rem;
+    flex-wrap: wrap;
 }
     
 .section-subscribe-title {
-    font-size: 40px;
-    font-weight: normal;
-    margin: 0px 0px;    
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0px 0px;   
+
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+    max-width: 400px;
 }
-    
+.section-subscribe-text{
+    font-size: 2rem;
+    text-align: center;
+}
+.section-subscribe-content{
+    max-width: 40vw;
+}
+
+.subscribe-inputs{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .email {
-    width: 400px;
+    width: 20vw;
     height: 50px;
-    font-size: 14px;
+    font-size: 20px;
     color: lightgray;
     padding: 0px 19px;
 }
@@ -247,4 +277,34 @@ main{
     text-transform: uppercase;
     color: white;
     font-weight: bold;
+}
+
+.nav-img{
+    display: none;
+
+}
+    
+@media screen and (max-width: 650px) {
+        .nav-img {
+            display: flex;
+            justify-content: center;
+            width: 75px;
+            height: 75px;
+
+        }
+        .nav-text{
+            display: none;
+        }
+           .list{
+               flex-wrap: nowrap;
+
+           }
+        .   
+        .container-block {
+            
+        }
+
+    }
+
+
 }
