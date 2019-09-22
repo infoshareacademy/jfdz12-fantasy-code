@@ -1,6 +1,6 @@
 .container-block {
     width: 80vw;
-    background: url('/wood.jpg') #311915b4 no-repeat center center;
+    background: url('./img/wood.jpg') #311915b4 no-repeat center center;
     margin: 0 auto;
 }
 
@@ -46,12 +46,13 @@ html {
 }
 
 .carousel-heading {
+    font-family: ‘Assassin’;
     font-size: 5rem;
     font-weight: 900;
 }
 
 .carousel-paragraph {
-    font-family: ‘Assassin’;
+    font-family: ‘LABRIT’;
     font-size: 3rem
 }
 
@@ -96,7 +97,7 @@ html {
 
 
 main{
-    background: url('fmap.png') no-repeat center center fixed;
+    background: url('./img/fmap.png') no-repeat center center fixed;
 }
 
 .lista a:hover{
