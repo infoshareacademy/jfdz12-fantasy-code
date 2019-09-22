@@ -228,9 +228,14 @@ main{
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000; 
+    max-width: 400px;
 }
 .section-subscribe-text{
     font-size: 2rem;
+    text-align: center;
+}
+.section-subscribe-content{
+    max-width: 40vw;
 }
 
 .subscribe-inputs{
@@ -240,9 +245,9 @@ main{
 }
 
 .email {
-    width: 30vw;
+    width: 20vw;
     height: 50px;
-    font-size: 14px;
+    font-size: 20px;
     color: lightgray;
     padding: 0px 19px;
 }
