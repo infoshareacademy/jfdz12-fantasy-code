@@ -255,6 +255,12 @@ main {
     display: none;
 }
 
+.footer {
+    margin: auto;
+    text-align: center;
+    color: white;
+    background-color: brown;
+}
 
 @media screen and (max-width: 1024px) {
     .scale {
