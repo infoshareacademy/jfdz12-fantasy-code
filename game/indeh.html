@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="game-container">
+        <table class="tablecontainer">
+            <tbody class="mapcontainer">
+                <tr>
+                    <td class="map map_wall_top_left--corner"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td> 
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_cross"></td>
+                    <td class="map map_wall_horizontal"></td> 
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td> 
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_horizontal"></td>
+                    <td class="map map_wall_top_right--corner"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td> 
+                    <td class="map map-wall map_wall--image--lamp"></td>
+                    <td class="map map-wall map_wall--image--door"></td>
+                    <td class="map map-wall map_wall--image--lamp"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map-wall map_wall--image"></td> 
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image--lamp"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td> 
+                    <td class="map map-wall map_wall--image--lamp"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor player"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--wet"></td>
+                    <td class="map map-wall map_wall--canal"></td>
+                    <td class="map map-wall map_wall--wet"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--hole"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall_end--left"></td>
+                    <td class="map map-wall map_wall--split"></td>
+                    <td class="map map-wall map_wall_horizontal"></td> 
+                    <td class="map map-wall map_wall_end--right"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map--floor--diff"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--hole"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall_cross"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_end--right"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image--lamp"></td>
+                    <td class="map map-wall map_wall--image"></td> 
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--water--bucket"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall_end--top"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--hole"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map-wall map_wall--edge"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--edge"></td>
+                    <td class="map map-wall map_wall--drain"></td>
+                    <td class="map map-wall map_wall--edge"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor--sewer"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--hole"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map-wall map_wall_end--left"></td>
+                    <td class="map map-wall map_wall_top_right--corner"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map-wall map_wall--water"></td> 
+                    <td class="map  map--floor"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map-wall map_wall--water--bucket"></td>
+                    <td class="map map-wall map_wall--water"></td>
+                    <td class="map map-wall map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map_wall--image"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall_end--top"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--hole"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical "></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--hole"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map-wall map_wall_bottom_left--corner"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td> 
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall--split"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_top_right--corner"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map  map-wall map_wall--vertical"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image--lamp"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image--lamp"></td>
+                    <td class="map map-wall map_wall--image"></td> 
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image--lamp"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--vertical"></td>s
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--image--lamp"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--sewer"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--hole"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--sewer"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall_end--left"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall--split"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_end--right"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--image--lamp"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image--lamp "></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image"></td>
+                    <td class="map map-wall map_wall--image--lamp "></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map map-wall map_wall_end--top"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor--hole"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall--vertical"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--hole"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td> 
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map--floor"></td>
+                    <td class="map map-wall map_wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map map-wall map_wall_bottom_left--corner"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td> 
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall--split"></td> 
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td> 
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_horizontal"></td>
+                    <td class="map map-wall map_wall_bottom_right--corner"></td>
+                </tr>
+              
+               
+            
+               
+            </tbody>
+        </table>
+    </div>
+
+<script src="script.js"></script>    
+</body>
+</html>
