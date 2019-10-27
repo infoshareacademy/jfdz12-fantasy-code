@@ -182,6 +182,17 @@ table{
     background-position: center;
     background-size: cover;
 }
+#map--life {
+    width: 100%;
+    background-color: yellow;
+}
+
+#map--life--bar {
+    width: 100%;
+    height: 30px;
+    background-color: green;
+}
+
 .player{
     
     background-image: url(tiles/knight.png), url(tiles/floor.png);

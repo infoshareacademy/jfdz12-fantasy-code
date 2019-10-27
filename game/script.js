@@ -9,7 +9,8 @@ class Player {
     if (!where || where.classList.contains("map-wall")) {return;}
 
     this.element.classList.remove('player');
-    where.classList.add("player"); 
+    where.classList.add("player");
+    changeLifeBar();
   }
 
   handleMove(direction){
@@ -44,6 +45,24 @@ document.addEventListener('keydown',(e)=>{
   player.handleMove(e.keyCode);
     console.log(player);
 });
+
+let life = 100;
+
+function changeLifeBar () {
+  let lifeBar = document.getElementById('map--life--bar');
+  if (life > 0) {
+    life -= 26;
+    lifeBar.innerHTML = `${life}%`;
+    lifeBar.style.width = `${life}%`;
+    if (life <= 0) {
+      lifeBar.innerHTML = `0%`;
+      lifeBar.style.width = `0%`;
+      alert("Game Over");
+    };
+  } else {
+    alert("Your smelly corpse is rotting in dungeon, better luck next time!");
+  };
+};
 
 // document.addEventListener('keydown',(e)=>{
 //   const player = document.querySelector(".player");
