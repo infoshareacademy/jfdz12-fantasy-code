@@ -21,6 +21,8 @@ table{
 .map {
     width: 50px;
     height: 50px;
+    min-width: 50px;
+    min-height: 50px;
     background-color: gray;
 }
 .map--floor{
@@ -28,6 +30,7 @@ table{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    /* position: relative; */
 }
 .map--floor--diff{
     background-image: url(tiles/floor2.png);
@@ -140,12 +143,6 @@ table{
     background-position: center;
     background-size: cover;
 }
-.map_wall_end--down{
-    background-image: url(tiles/wallVEndDown.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 .map_wall--canal{
     background-image: url(tiles/wallSuer.png);
     background-repeat: no-repeat;
@@ -183,8 +180,15 @@ table{
     background-size: cover;
 }
 .player{
-    
-    background-image: url(tiles/knight.png), url(tiles/floor.png);
     background-position: center;
     background-size: cover;
+    position: relative;
+}
+
+.player:before{
+    content: url(tiles/knight.png);
+    position: absolute;
+    top: -41px;
+    left: -23px;
+    transform: scale(.7);
 }
