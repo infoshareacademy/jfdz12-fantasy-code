@@ -2,6 +2,22 @@ body{
     background-color:gray;
 }
 
+#game--life--container {
+    background-color: lightseagreen;
+    border: solid 1px black;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0.25rem;
+}
+
+#game--life--bar {
+    min-width: 5%;
+    background-color: seagreen;
+    padding: 0.5rem 0;
+    margin: 0.25rem;
+    border-radius: 1rem;
+}
+
 .mapcontainer{
     border: 5px solid;
 }
@@ -181,21 +197,6 @@ table{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-#map--life {
-    background-color: lightseagreen;
-    border: solid 1px black;
-    border-radius: 1rem;
-    text-align: center;
-    margin: 0.25rem;
-}
-
-#map--life--bar {
-    background-color: seagreen;
-    padding: 0.5rem 0;
-    margin: 0.25rem;
-    border-radius: 1rem;
 }
 
 .player{

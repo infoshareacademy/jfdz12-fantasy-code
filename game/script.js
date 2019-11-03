@@ -53,9 +53,8 @@ function changeLife () {
   const heart = document.createElement('img');
   heart.src = "./img/heart.png";
   heart.style.width = "1em";
-  let lifeBar = document.getElementById('map--life--bar');
+  let lifeBar = document.getElementById('game--life--bar');
   life -= lifePortion;
-  lifeBar.style.minWidth = '5%';
   lifeBar.style.width = `${life}%`;
   if (life > 0) {
     lifeBar.innerHTML = `${life}%`;
