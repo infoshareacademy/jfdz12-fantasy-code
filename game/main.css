@@ -182,15 +182,20 @@ table{
     background-position: center;
     background-size: cover;
 }
+
 #map--life {
-    width: 100%;
-    background-color: yellow;
+    background-color: lightseagreen;
+    border: solid 1px black;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0.25rem;
 }
 
 #map--life--bar {
-    width: 100%;
-    height: 30px;
-    background-color: green;
+    background-color: seagreen;
+    padding: 0.5rem 0;
+    margin: 0.25rem;
+    border-radius: 1rem;
 }
 
 .player{

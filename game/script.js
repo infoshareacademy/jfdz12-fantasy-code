@@ -10,7 +10,7 @@ class Player {
 
     this.element.classList.remove('player');
     where.classList.add("player");
-    changeLifeBar();
+    changeLife();
   }
 
   handleMove(direction){
@@ -47,21 +47,25 @@ document.addEventListener('keydown',(e)=>{
 });
 
 let life = 100;
+let lifePortion = 11;
 
-function changeLifeBar () {
+function changeLife () {
+  const heart = document.createElement('img');
+  heart.src = "./img/heart.png";
+  heart.style.width = "1em";
   let lifeBar = document.getElementById('map--life--bar');
+  life -= lifePortion;
+  lifeBar.style.minWidth = '5%';
+  lifeBar.style.width = `${life}%`;
   if (life > 0) {
-    life -= 26;
     lifeBar.innerHTML = `${life}%`;
-    lifeBar.style.width = `${life}%`;
-    if (life <= 0) {
-      lifeBar.innerHTML = `0%`;
-      lifeBar.style.width = `0%`;
-      alert("Game Over");
-    };
+    lifeBar.appendChild(heart);
   } else {
-    alert("Your smelly corpse is rotting in dungeon, better luck next time!");
+      lifeBar.innerHTML = '0%';
+      lifeBar.appendChild(heart);
+      alert("Your smelly corpse is rotting in dungeon, better luck next time!");
   };
+  
 };
 
 // document.addEventListener('keydown',(e)=>{
