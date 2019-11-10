@@ -47,21 +47,24 @@ document.addEventListener('keydown',(e)=>{
 });
 
 let life = 100;
-let lifePortion = 11;
+let lifePortion = 51;
 
 function changeLife () {
   const heart = document.createElement('img');
   heart.src = "./img/heart.png";
   heart.style.width = "1em";
+  
   let lifeBar = document.getElementById('game--life--bar');
   life -= lifePortion;
   lifeBar.style.width = `${life}%`;
+  lifeBar.innerHTML = '';
+  lifeBar.appendChild(heart);
+  
   if (life > 0) {
-    lifeBar.innerHTML = `${life}%`;
-    lifeBar.appendChild(heart);
+    lifeBar.appendChild(document.createTextNode(`${life}%`));
   } else {
-      lifeBar.innerHTML = '0%';
-      lifeBar.appendChild(heart);
-      alert("Your smelly corpse is rotting in dungeon, better luck next time!");
+      lifeBar.style.width = '0%';
+      lifeBar.appendChild(document.createTextNode(`0%`));
+      setTimeout(() => alert("Your smelly corpse is rotting in dungeon, better luck next time!"), 0);
   };
 };
