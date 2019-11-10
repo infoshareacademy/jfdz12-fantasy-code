@@ -47,7 +47,7 @@ document.addEventListener('keydown',(e)=>{
 });
 
 let life = 100;
-let lifePortion = 51;
+let lifePortion = 1;
 
 function changeLife () {
   const heart = document.createElement('img');
@@ -59,7 +59,7 @@ function changeLife () {
   lifeBar.style.width = `${life}%`;
   lifeBar.innerHTML = '';
   lifeBar.appendChild(heart);
-  
+
   if (life > 0) {
     lifeBar.appendChild(document.createTextNode(`${life}%`));
   } else {

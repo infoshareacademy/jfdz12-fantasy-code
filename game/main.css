@@ -8,6 +8,8 @@ body{
     border-radius: 1rem;
     text-align: center;
     margin: 0.25rem;
+    position: sticky;
+    top: 0;
 }
 
 #game--life--bar {
