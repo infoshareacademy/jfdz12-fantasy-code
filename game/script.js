@@ -66,8 +66,17 @@ const newMap = [
   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 ];
 
+createTD = (newMap)=>{
+  arrayFrom.forEach((elem)=>{
+    document.createElement("tr")
+    return arrayFrom
+  });
+}
 
-// newMap.forEach(el,index)
+
+  
+
+
 
 // ctr - corner top right
 // ctl - corner top left
@@ -87,10 +96,20 @@ const newMap = [
 // wer - wall end right
 // wel - wall end left
 // web - wall end bottom
+// wcan - wall canal
+// wwet - wall wet 
+// we - wall edge
+// ww - water
+// wwb - water bucket
 // 
 // 
 // 
 // 
+// 
+
+
+
+
 
 // document.addEventListener('keydown',(e)=>{
 //   const player = document.querySelector(".player");
