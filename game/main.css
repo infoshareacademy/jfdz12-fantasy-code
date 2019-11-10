@@ -23,7 +23,39 @@ table{
     height: 50px;
     min-width: 50px;
     min-height: 50px;
-    background-color: gray;
+    background-color: gray;const newMap = [
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        // ];
+        
+        // createTD = (newMap)=>{
+        //   arrayFrom.forEach((elem)=>{
+        //     document.createElement("tr")
+        //     return arrayFrom
+        //   });
+        // }
+        
+        
+          
+        
+        
+        
 }
 .map--floor{
     background-image: url(tiles/floor.png);
@@ -191,4 +223,25 @@ table{
     top: -41px;
     left: -23px;
     transform: scale(.7);
+}
+.monster{
+    background-image: url(tiles/monster.png), url(tiles/floor.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#game--life--container {
+    background-color: lightseagreen;
+    border: solid 1px black;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0.25rem;
+}
+
+#game--life--bar {
+    min-width: 5%;
+    background-color: seagreen;
+    padding: 0.5rem 0;
+    margin: 0.25rem;
+    border-radius: 1rem;
 }
