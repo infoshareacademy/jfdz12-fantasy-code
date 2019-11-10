@@ -31,3 +31,21 @@ $('#link-extras').click(() => {
     }, 500);
 });
 
+// cookieInfo
+const cookieInfo = document.querySelector(".cookie");
+const cookieYesBtn = document.querySelector(".cookie-btn-yes");
+const cookieNoBtn = document.querySelector(".cookie-btn-no");
+const cookieShow = () => {
+   if (!document.cookie) {
+       cookieInfo.style.display = "block";
+       cookieYesBtn.addEventListener("click", () => {
+           document.cookie = "Info = ourCookie";
+           cookieInfo.style.display = "none";
+       })
+       cookieNoBtn.addEventListener("click", () => {
+           alert("Sorry! You need to fly away!")
+       })
+   }
+};
+cookieShow();
+// end of cookieInfo
