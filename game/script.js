@@ -1,5 +1,7 @@
 const map = document.querySelector('.tablecontainer');
 
+const LIFE_PORTION = Math.floor(Math.random()*25);
+
 class Player {
   constructor(){
     this.element = null;
@@ -10,6 +12,7 @@ class Player {
 
     this.element.classList.remove('player');
     where.classList.add("player"); 
+    aplle();
   }
 
   handleMove(direction){
@@ -19,7 +22,7 @@ class Player {
           case 37:
             const prev = this.element.previousElementSibling;
             this.move(prev);
-          
+            
             break;
           case 39:
            const next = this.element.nextElementSibling;
@@ -54,7 +57,8 @@ monsters.forEach(monster => {
     || monster.previousElementSibling.classList.contains("player")
     || monster.nextElementSibling.classList.contains("player")
     ){
-      changeLife()
+      life -= LIFE_PORTION;
+      renderLife()
     }else{
       return;
     }
@@ -64,18 +68,30 @@ monsters.forEach(monster => {
 });
 
 
+const applePosition = document.querySelector(".apple");
+const playerPosition = document.querySelector(".player");
+const aplle=()=>{
+  if(applePosition.classList.contains("player")){
+    heal();
+  }else{
+    return;
+  }
+}
 
+const heal= () =>{
+  life += 50;
+  if(life >100) life = 100;
+  renderLife();
+}
 
 
 let life = 100;
-let lifePortion = Math.floor(Math.random()*5);
 
-function changeLife () {
+function renderLife () {
   const heart = document.createElement('img');
   heart.src = "tiles/heart.png";
   heart.style.width = "1em";
   let lifeBar = document.getElementById('game--life--bar');
-  life -= lifePortion;
   lifeBar.style.width = `${life}%`;
   if (life > 0) {
     lifeBar.innerHTML = `${life}%`;
@@ -86,6 +102,7 @@ function changeLife () {
       // alert("Your smelly corpse is rotting in dungeon, better luck next time!");
   };
 };
+
 
 
 
