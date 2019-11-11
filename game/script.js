@@ -49,34 +49,65 @@ document.addEventListener('keydown', (e) => {
   player.handleMove(e.keyCode);
   console.log(player);
 });
-let indexI;
-const monsters = [...document.querySelectorAll('.monster')];
+
+
+const monsters = [...document.querySelectorAll('.monster')].map(el => {
+  return {
+    domElement: el,
+    domElementIndex: [...el.parentElement.children].indexOf(el),
+    life: 3,
+    intervalId: undefined
+  }
+})
+
+
 monsters.forEach(monster => {
-  const index = [...monster.parentElement.children].indexOf(monster)
+  const index = [...monster.domElement.parentElement.children].indexOf(monster.domElement)
   const monsterAttackDirection = () => {
-    if (monster.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
-      monster.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
-      monster.previousElementSibling.classList.contains("player") ||
-      monster.nextElementSibling.classList.contains("player")
+    if (monster.domElement.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
+      monster.domElement.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
+      monster.domElement.previousElementSibling.classList.contains("player") ||
+      monster.domElement.nextElementSibling.classList.contains("player")
     ) {
-      
+
       life -= LIFE_PORTION;
       renderLife()
-      
+
     } else {
       return;
     }
-    
+
   }
-  
-  indexI = setInterval(monsterAttackDirection, 1000)
-  
+  monster.intervalId = setInterval(monsterAttackDirection, 1000)
+
 });
 
 
 
+const playerAttack = () => {
+  monsters.forEach(monster => {
+      const player = document.querySelector(".player");
+      const index = [...player.parentElement.children].indexOf(player);
+
+      if (
+          player.previousElementSibling.classList === monster.domElement||
+          player.nextElementSibling.classList === monster.domElement ||
+          player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`) === monster.domElement ||
+          player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`) === monster.domElement
+      ) {
+          monster.life -= 1;
+          if (monster.life === 0) {
+              monster.domElement.classList.remove("monster");
+              clearInterval(monster.intervalId);
+              monsters.filter(monster => monster.live > 0)
+          }
+      }
+  })
+}
+
+
+
 const applePosition = document.querySelector(".apple");
-const playerPosition = document.querySelector(".player");
 const aplle = () => {
   if (applePosition.classList.contains("player")) {
     heal();
@@ -109,47 +140,9 @@ function renderLife() {
     // alert("Your smelly corpse is rotting in dungeon, better luck next time!");
   };
 };
-// const lookAround =()=>{
 
-//   if (player.previousElementSibling.classList.contains("monster") ||
-//         player.nextElementSibling.classList.contains("monster") ||
-//         player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster") ||
-//         player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster")
-//       ){
-//         return;
-//       }
-// }
 
-let monsterLife = 3
-const playerAttack = () => {
-  monsters.forEach(monster => {
-    console.log(monster)
-        monsterLife -= 0.25
-    if (monsterLife === 0) {
-      const player = document.querySelector(".player");
-      const index = [...player.parentElement.children].indexOf(player);
-      if (player.previousElementSibling.classList.contains("monster") ||
-          player.nextElementSibling.classList.contains("monster") ||
-          player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster") ||
-          player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster")
-      ) {
-          player.previousElementSibling.classList.remove("monster") ||
-          player.nextElementSibling.classList.remove("monster") ||
-          player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.remove("monster") ||
-          player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.remove("monster")
-         
-        console.log(monsterLife)
-        monsterLife = 3;
 
-      }
-        
-          
-        clearInterval(indexI)
-        
-      console.log(monsters)
-    }
-  })
-}
 
 
 
