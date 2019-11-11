@@ -212,6 +212,7 @@ table{
     background-color: seagreen;
     padding: 0.5rem 0;
     border-radius: 1rem;
+    transition-duration: 300ms;
  }
 
 .apple{

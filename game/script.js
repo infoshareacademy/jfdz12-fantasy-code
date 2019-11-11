@@ -85,7 +85,7 @@ monsters.forEach(monster => {
 
 const playerAttack = () => {
   monsters.forEach(monster => {
-      const player = document.querySelector(".player");
+      const player = document.querySelector("player");
       const index = [...player.parentElement.children].indexOf(player);
 
       if (
