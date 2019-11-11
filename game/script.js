@@ -55,7 +55,7 @@ const monsters = [...document.querySelectorAll('.monster')].map(el => {
   return {
     domElement: el,
     domElementIndex: [...el.parentElement.children].indexOf(el),
-    life: 3,
+    life: 5,
     intervalId: undefined
   }
 })
@@ -83,7 +83,6 @@ monsters.forEach(monster => {
 });
 
 
-
 const playerAttack = () => {
   monsters.forEach(monster => {
       const player = document.querySelector(".player");
@@ -106,11 +105,11 @@ const playerAttack = () => {
 }
 
 
-
 const applePosition = document.querySelector(".apple");
 const aplle = () => {
   if (applePosition.classList.contains("player")) {
     heal();
+    applePosition.classList.remove("apple")
   } else {
     return;
   }
@@ -121,7 +120,6 @@ const heal = () => {
   if (life > 100) life = 100;
   renderLife();
 }
-
 
 let life = 100;
 
@@ -140,13 +138,6 @@ function renderLife() {
     // alert("Your smelly corpse is rotting in dungeon, better luck next time!");
   };
 };
-
-
-
-
-
-
-
 
 document.addEventListener('keydown', (e) => {
   const player = document.querySelector(".player");
