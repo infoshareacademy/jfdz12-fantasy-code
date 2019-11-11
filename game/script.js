@@ -1,93 +1,100 @@
 const map = document.querySelector('.tablecontainer');
 
-const LIFE_PORTION = Math.floor(Math.random()*25);
+const LIFE_PORTION = Math.floor(Math.random() * 25);
 
 class Player {
-  constructor(){
+  constructor() {
     this.element = null;
   }
-  
+
   move(where) {
-    if (!where || where.classList.contains("map-wall")) {return;}
+    if (!where || where.classList.contains("map-wall")) {
+      return;
+    }
 
     this.element.classList.remove('player');
-    where.classList.add("player"); 
+    where.classList.add("player");
     aplle();
   }
 
-  handleMove(direction){
+  handleMove(direction) {
     this.element = document.querySelector(".player");
     const index = [...this.element.parentElement.children].indexOf(this.element);
-    switch(direction){
-          case 37:
-            const prev = this.element.previousElementSibling;
-            this.move(prev);
-            
-            break;
-          case 39:
-           const next = this.element.nextElementSibling;
-            this.move(next);
-            
-            break;
-          case 38:
-            const upwardsElement = this.element.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`);
-            this.move(upwardsElement);
-            break;
-          case 40: 
-            const downwardElement = this.element.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`);
-            this.move(downwardElement);
-          
-            break;
-        };
+    switch (direction) {
+      case 37:
+        const prev = this.element.previousElementSibling;
+        this.move(prev);
+
+        break;
+      case 39:
+        const next = this.element.nextElementSibling;
+        this.move(next);
+
+        break;
+      case 38:
+        const upwardsElement = this.element.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`);
+        this.move(upwardsElement);
+        break;
+      case 40:
+        const downwardElement = this.element.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`);
+        this.move(downwardElement);
+
+        break;
+    };
   }
 }
 
 const player = new Player();
-document.addEventListener('keydown',(e)=>{
+document.addEventListener('keydown', (e) => {
   player.handleMove(e.keyCode);
-    console.log(player);
+  console.log(player);
 });
-
-const monsters = Array.from(document.querySelectorAll('.monster'));
+let indexI;
+const monsters = [...document.querySelectorAll('.monster')];
 monsters.forEach(monster => {
   const index = [...monster.parentElement.children].indexOf(monster)
-  const monsterAttackDirection = () =>{
-    if(monster.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player')
-    || monster.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player')
-    || monster.previousElementSibling.classList.contains("player")
-    || monster.nextElementSibling.classList.contains("player")
-    ){
+  const monsterAttackDirection = () => {
+    if (monster.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
+      monster.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
+      monster.previousElementSibling.classList.contains("player") ||
+      monster.nextElementSibling.classList.contains("player")
+    ) {
+      
       life -= LIFE_PORTION;
       renderLife()
-    }else{
+      
+    } else {
       return;
     }
+    
   }
-  setInterval(monsterAttackDirection,1000);
-
+  
+  indexI = setInterval(monsterAttackDirection, 1000)
+  
 });
+
 
 
 const applePosition = document.querySelector(".apple");
 const playerPosition = document.querySelector(".player");
-const aplle=()=>{
-  if(applePosition.classList.contains("player")){
+const aplle = () => {
+  if (applePosition.classList.contains("player")) {
     heal();
-  }else{
+  } else {
     return;
   }
 }
 
-const heal= () =>{
+const heal = () => {
   life += 50;
-  if(life >100) life = 100;
+  if (life > 100) life = 100;
   renderLife();
 }
 
 
 let life = 100;
 
-function renderLife () {
+function renderLife() {
   const heart = document.createElement('img');
   heart.src = "tiles/heart.png";
   heart.style.width = "1em";
@@ -97,13 +104,84 @@ function renderLife () {
     lifeBar.innerHTML = `${life}%`;
     lifeBar.appendChild(heart);
   } else {
-      lifeBar.innerHTML = '0%';
-      lifeBar.appendChild(heart);
-      // alert("Your smelly corpse is rotting in dungeon, better luck next time!");
+    lifeBar.innerHTML = '0%';
+    lifeBar.appendChild(heart);
+    // alert("Your smelly corpse is rotting in dungeon, better luck next time!");
   };
 };
+// const lookAround =()=>{
+
+//   if (player.previousElementSibling.classList.contains("monster") ||
+//         player.nextElementSibling.classList.contains("monster") ||
+//         player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster") ||
+//         player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster")
+//       ){
+//         return;
+//       }
+// }
+
+let monsterLife = 3
+const playerAttack = () => {
+  monsters.forEach(monster => {
+    console.log(monster)
+        monsterLife -= 0.25
+    if (monsterLife === 0) {
+      const player = document.querySelector(".player");
+      const index = [...player.parentElement.children].indexOf(player);
+      if (player.previousElementSibling.classList.contains("monster") ||
+          player.nextElementSibling.classList.contains("monster") ||
+          player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster") ||
+          player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster")
+      ) {
+          player.previousElementSibling.classList.remove("monster") ||
+          player.nextElementSibling.classList.remove("monster") ||
+          player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.remove("monster") ||
+          player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.remove("monster")
+         
+        console.log(monsterLife)
+        monsterLife = 3;
+
+      }
+        
+          
+        clearInterval(indexI)
+        
+      console.log(monsters)
+    }
+  })
+}
 
 
+
+
+
+document.addEventListener('keydown', (e) => {
+  const player = document.querySelector(".player");
+  const index = [...player.parentElement.children].indexOf(player);
+  switch (e.keyCode) {
+    case 32:
+      const prev = player.previousElementSibling;
+      if (prev || prev.classList.contains("monster")) {
+        playerAttack()
+      }
+
+      const next = player.nextElementSibling
+      if (next.classList.contains("monster")) {
+        playerAttack()
+      }
+
+      const upwardsElement = player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`);
+      if (upwardsElement.classList.contains("monster")) {
+        playerAttack()
+      }
+
+      const downwardElement = player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`);
+      if (downwardElement.classList.contains("monster")) {
+        playerAttack()
+      }
+      break;
+  }
+});
 
 
 
@@ -180,14 +258,14 @@ function renderLife () {
 //       }
 //       prev.classList.add("player");
 //       player.classList.remove('player');
-    
+
 //       break;
 //     case 39:
 //      const next = player.nextElementSibling
 //         if(!next || next.classList.contains("map-wall")){return}
 //       next.classList.add("player"); 
 //       player.classList.remove('player');
-      
+
 //       break;
 //     case 38:
 //       const upwardsElement = player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`);
@@ -200,11 +278,11 @@ function renderLife () {
 //       if(!downwardElement || downwardElement.classList.contains("map-wall")){return}
 //       downwardElement.classList.add('player');
 //       player.classList.remove('player');
-    
+
 //           break;
 //   };
 // });
-  
+
 
 
 
@@ -235,5 +313,17 @@ function renderLife () {
 //           player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.add('player');
 //           player.classList.remove('player');
 //           break;
+//   }
+// })
+
+
+// addEventListener('keydown', (e) => {
+//   if (player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('monster')
+//     || player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('monster')
+//     || player.previousElementSibling.classList.contains("monster")
+//     || player.nextElementSibling.classList.contains("monster")) {
+//     for (e.keyCode === 32) {
+//       playerAttack();
+//     }
 //   }
 // })
