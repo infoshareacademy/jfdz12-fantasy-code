@@ -303,24 +303,35 @@ a:acitve {
   }
 
   /* Cookies */
- .cookie {
+ .cookies {
     position: fixed;
+    text-align: center;
     bottom: 5%;
     right: 5%;
     z-index: 99;
-    background-color: rgb(204,204,204, 0.5);
+    background-color: rgba(17, 16, 16, 0.9);
     display: none;
     padding: 25px;
+    border-radius: 5px;
     width: 400px;
  }
  @media (max-width: 450px) {
-    .cookie {
+    .cookies {
         width: 90%;
     }
  }
- .cookie-btn,
- .cookie-btn:visited {
-  background-color: #e67e22;
+
+ .cookies > h4, .cookies > p {
+     color: white;
+ }
+
+ .cookies > p {
+     font-size: 1rem;
+ }
+
+ .cookies-btn,
+ .cookies-btn:visited {
+  background-color: rgb(61, 47, 78);
   color: white;
   width: 70px;
   padding: 10px;
@@ -329,9 +340,10 @@ a:acitve {
   cursor: pointer;
   border: none;
  }
- .cookie-btn:hover,
- .cookie-btn:active {
-  background-color: #bf6516;
+ .cookies-btn:hover,
+ .cookies-btn:active {
+  background-color: #9b53df;
+  color: black;
   border-radius: 4px;
   border: none;
  }

@@ -1,6 +1,3 @@
-
-
-
 const scrollTo= function(){
     let element = document.getElementById("hero");
 element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" });
@@ -32,20 +29,20 @@ $('#link-extras').click(() => {
 });
 
 // cookieInfo
-const cookieInfo = document.querySelector(".cookie");
-const cookieYesBtn = document.querySelector(".cookie-btn-yes");
-const cookieNoBtn = document.querySelector(".cookie-btn-no");
-const cookieShow = () => {
-   if (!document.cookie) {
-       cookieInfo.style.display = "block";
-       cookieYesBtn.addEventListener("click", () => {
-           document.cookie = "Info = ourCookie";
-           cookieInfo.style.display = "none";
+const cookies = document.querySelector(".cookies");
+const cookiesYesBtn = document.querySelector(".cookies-btn-yes");
+const cookiesNoBtn = document.querySelector(".cookies-btn-no");
+const cookiesShow = () => {
+   if (!document.cookies) {
+       cookies.style.display = "block";
+       cookiesYesBtn.addEventListener("click", () => {
+           document.cookies = "Info = ourCookies";
+           cookies.style.display = "none";
        })
-       cookieNoBtn.addEventListener("click", () => {
-           alert("Sorry! You need to fly away!")
+       cookiesNoBtn.addEventListener("click", () => {
+           alert("Sorry! It's just illusion of choice, you must obey!")
        })
    }
 };
-cookieShow();
+cookiesShow();
 // end of cookieInfo
