@@ -89,8 +89,8 @@ const playerAttack = () => {
     const index = [...player.parentElement.children].indexOf(player);
 
     if (
-      player.previousElementSibling.classList === monster.domElement ||
-      player.nextElementSibling.classList === monster.domElement ||
+      player.previousElementSibling === monster.domElement ||
+      player.nextElementSibling === monster.domElement ||
       player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`) === monster.domElement ||
       player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`) === monster.domElement
     ) {
@@ -152,7 +152,7 @@ document.addEventListener('keydown', (e) => {
     case 32:
 
       if (playerPosition.previousElementSibling.classList.contains("monster") ||
-        playerPosition.previousElementSibling.classList.contains("monster") ||
+        playerPosition.nextElementSibling.classList.contains("monster") ||
         playerPosition.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster") ||
         playerPosition.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster")
       )
