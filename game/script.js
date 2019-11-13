@@ -66,8 +66,8 @@ monsters.forEach(monster => {
   const monsterAttackDirection = () => {
     if (monster.domElement.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
       monster.domElement.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
-      monster.domElement.previousElementSibling.classList.contains("player") ||
-      monster.domElement.nextElementSibling.classList.contains("player")
+      monster.domElement.previousElementSibling.classList.contains('player') ||
+      monster.domElement.nextElementSibling.classList.contains('player')
     ) {
 
       life -= LIFE_PORTION;
@@ -85,22 +85,28 @@ monsters.forEach(monster => {
 
 const playerAttack = () => {
   monsters.forEach(monster => {
-      const player = document.querySelector("player");
-      const index = [...player.parentElement.children].indexOf(player);
+    const player = document.querySelector(".player");
+    const index = [...player.parentElement.children].indexOf(player);
 
-      if (
-          player.previousElementSibling.classList === monster.domElement||
-          player.nextElementSibling.classList === monster.domElement ||
-          player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`) === monster.domElement ||
-          player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`) === monster.domElement
-      ) {
-          monster.life -= 1;
-          if (monster.life === 0) {
-              monster.domElement.classList.remove("monster");
-              clearInterval(monster.intervalId);
-              monsters.filter(monster => monster.live > 0)
-          }
+    if (
+      player.previousElementSibling.classList === monster.domElement ||
+      player.nextElementSibling.classList === monster.domElement ||
+      player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`) === monster.domElement ||
+      player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`) === monster.domElement
+    ) {
+
+      monster.life -= 1;
+      console.log(player.nextElementSibling)
+      console.log(player.previousElementSibling)
+      console.log(monster.life)
+      console.log(monster)
+      if (monster.life === 0) {
+        monster.domElement.classList.remove("monster");
+        clearInterval(monster.intervalId);
+        monsters.filter(monster => monster.live > 0)
       }
+
+    }
   })
 }
 
@@ -140,29 +146,19 @@ function renderLife() {
 };
 
 document.addEventListener('keydown', (e) => {
-  const player = document.querySelector(".player");
-  const index = [...player.parentElement.children].indexOf(player);
+  const playerPosition = document.querySelector(".player");
+  const index = [...playerPosition.parentElement.children].indexOf(playerPosition);
   switch (e.keyCode) {
     case 32:
-      const prev = player.previousElementSibling;
-      if (prev || prev.classList.contains("monster")) {
-        playerAttack()
-      }
 
-      const next = player.nextElementSibling
-      if (next.classList.contains("monster")) {
+      if (playerPosition.previousElementSibling.classList.contains("monster") ||
+        playerPosition.previousElementSibling.classList.contains("monster") ||
+        playerPosition.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster") ||
+        playerPosition.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster")
+      )
         playerAttack()
-      }
 
-      const upwardsElement = player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`);
-      if (upwardsElement.classList.contains("monster")) {
-        playerAttack()
-      }
 
-      const downwardElement = player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`);
-      if (downwardElement.classList.contains("monster")) {
-        playerAttack()
-      }
       break;
   }
 });
