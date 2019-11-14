@@ -28,7 +28,7 @@ a:acitve {
 
 .inner {
     height: 30vw;
-    background-image: url(dice.png);
+    background-image: url(/img/dice.png);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -82,7 +82,7 @@ a:acitve {
 }
 
 .hero {
-    background-image: url('banner.jpg');
+    background-image: url('/img/banner.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -163,6 +163,10 @@ a:acitve {
     padding: 5px;
 }
 
+.extra>p{
+    font-size: 1.5rem;
+}
+
 .function>div, .author>div, .extra>div {
     height: 7rem;
     background-color: darkblue;
@@ -175,11 +179,21 @@ a:acitve {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    color: white;
+    color: black;
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 60%;
     text-align: center;
+}
+
+.subscribe-mail {
+    margin-bottom: 1rem;;
+}
+
+.subscribe-terms a {
+    color: #2a343b;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .section-subscribe-title {
