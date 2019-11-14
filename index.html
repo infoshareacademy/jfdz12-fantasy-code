@@ -1,305 +1,299 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="main.css">
-
-  <title>QuestBoard
-  </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
+    <!-- Menu -->
 
-  <main>
-    <header id="hero">
-      <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselIndicators" data-slide-to="1">
-          </li>
-          <li data-target="#carouselIndicators" data-slide-to="2">
-          </li>
-          <li data-target="#carouselIndicators" data-slide-to="3">
-          </li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./img/dai.jpg" class="d-block vw-100 vh-100 scale" alt="Merry group at a table">
-            <div class="carousel-caption d-none d-md-block">
-              <h1 class="carousel-heading">
-                Meet fun people
-              </h1>
-              <p class="carousel-paragraph">
-                optional rating
-                of other gamers
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./img/hs.jpg" class="d-block vw-100 vh-100 scale" alt="Tawern window">
-            <div class="carousel-caption d-none d-md-block">
-              <h1 class="carousel-heading carousel-heading--dark">
-                Throw yourself
-                into the action!
-              </h1>
-              <p class="carousel-paragraph">
-                Secret entrance
-                password: "Nie w
-                szczepionke!"
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./img/inn.jpg" class="d-block vw-100 vh-100 scale" alt="People in tawern">
-            <div class="carousel-caption d-none d-md-block">
-              <h1 class="carousel-heading">
-                Complete quests
-                with friends
-              </h1>
-              <p class="carousel-paragraph">
-                and level up
-                your character!
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./img/tav.jpg" class="d-block vw-100 vh-100 scale" alt="Toast in tawern">
-            <div class="carousel-caption d-none d-md-block">
-              <h1 class="carousel-heading">
-                Join role
-                playing
-                campaings</h1>
-              <p class="carousel-paragraph">
-                and build thick
-                athmosphere</p>
-            </div>
-
-          </div>
+    <!-- Hero -->
+    <nav id="header" class="menu">
+        <div class="menu-item">
+            <ul>
+                <li><a id="link-home">Home</a></li>
+                <li><a id="link-functions">Functions</a></li>
+                <li><a id="link-authors">Authors</a></li>
+                <li><a id="link-extras">Extras</a></li>
+            </ul>
         </div>
-        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </header>
-
-    <nav class="navig container-fluid sticky-top">
-      <ul class="list row ">
-
-          <li class="list_home col-md-3">
-              <a href="#hero">
-                <p class="nav-text">HOME</p>
-                <img class="nav-img" src="./icons/axes.png">
-              </a>
-            </li>
-        <li class="list_about col-md-3">
-          <a href="#function"><p class="nav-text">FUNCTIONS</p>
-            <img class="nav-img" src="./icons/treasure_chest_02.png"></a>
-
-        </li>
-        <li class="list_authors col-md-3">
-          <a href="#authors">
-            <p class="nav-text">AUTHORS</p>
-            <img class="nav-img" src="./icons/scroll1.png">
-          </a>
-        </li>
-        <li class="list_extras col-md-3">
-
-          <a href="#extras"><p class="nav-text">EXTRAS</p>
-            <img class="nav-img" src="./icons/pouch_01.png"></a>
-
-        </li>
-      </ul>
     </nav>
+    <section class="hero">
 
-
-    <section class="container-block functions--content" id="function">
-      <h1 class="functions--content--header carousel-heading">Functions</h1>
-      <div class="functions--content--container">
-        <div>
-          <h2 class="functions--content--header">Choose game</h2>
-          <img src="./icons/treasure_chest_01.png" class="functions--img" alt="Game">
-          <p class="functions--content--paragraph">
-            Use the list of most popular games, or add one by your own.
-          </p>
+        <div class="herocon">
+            <div class="hero-image"></div>
+            <div class="inner">
+                <h2>Quest Board</h2>
+                <p>Meet fun people, Throw yourself into the action!</p>
+            </div>
         </div>
 
-        <div>
-          <h2 class="functions--content--header">Gather players</h2>
-          <img src="./icons/flags.png" class="functions--img" alt="Players">
-          <p class="functions--content--paragraph">
-            Decide how many and what sort of players you are looking for.
-          </p>
-        </div>
+    </section>
 
-        <div>
-          <h2 class="functions--content--header">Fix place and date</h2>
-          <img src="./icons/scroll.png" class="functions--img" alt="Place and date">
-          <p class="functions--content--paragraph">
-            Select location, date and time of your desired game session.
-          </p>
-        </div>
+    <!-- Cookies -->
+    <div class="cookies">
+        <h4>This website uses cookies</h4>
+        <p>We use cookies to personalise content and ads, to provide
+            social media features and to analyse our traffic. We also share
+            information about your use of our site with our social media,
+            advertising and analytics partners who may combine it with other
+            information that you’ve provided to them or that they’ve collected
+            from your use of their services</p>
+        <button class="cookies-btn cookies-btn-yes">Accept</button>
+        <button class="cookies-btn cookies-btn-no">Decline</button>
+    </div>
+    <!-- End of Cookies -->
 
-        <div>
-          <h2 class="functions--content--header">Reserve table</h2>
-          <img src="./icons/beer.png" class="functions--img" alt="Reserve table">
-          <p class="functions--content--paragraph">
-            Select a venue and reserve a table.
-          </p>
+    <!-- Functions -->
+    <section id="functions" class="section_container1">
+        <div class="container container_functions">
+            <header class="section_header1">
+                <h2>Funkcje</h2>
+                <p>Oto wszystkie funkcje naszej appki
+                </p>
+            </header>
+            <div class="function-divs">
+                <div class="function">
+                    <div class="function-img function-img-1"><img class="function-img-icon" src="/icons/hammer2.png"
+                            alt="sa" /></div>
+                    <h2>Choose game</h2>
+                    <p>Use the list of most popular games, or add one by your own.</p>
+                </div>
+                <div class="function">
+                    <div class="function-img function-img-2"><img class="function-img-icon" src="/icons/beer2.png"
+                            alt="sa" /></div>
+                    <h2>Gather players</h2>
+                    <p>Decide how many and what sort of players you are looking for.</p>
+                </div>
+                <div class="function">
+                    <div class="function-img function-img-3"><img class="function-img-icon" src="/icons/dagger2.png"
+                            alt="sa" /></div>
+                    <h2>Fix place and date</h2>
+                    <p>Select location, date and time of your desired game session.</p>
+                </div>
+                <div class="function">
+                    <div class="function-img function-img-4"><img class="function-img-icon" src="/icons/staff2.png"
+                            alt="sa" /></div>
+                    <h2>Reserve table</h2>
+                    <p>Select a venue and reserve a table.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Authors -->
+    <section id="authors" class="section_container2">
+        <div class="container container_authors">
+            <header class="section_header2">
+                <h2>Autorzy</h2>
+                <p>Meet the men who play!
+                </p>
+            </header>
+            <div class="authors-divs">
+
+                <div class="author-card">
+                    <div class="author-card-inner">
+                        <div class="author-card-front">
+                            <div class="function-img function-img-2"><img class="function-img-icon"
+                                    src="/icons/beer2.png" alt="sa" /></div>
+                            <p>Karol Nogal</p>
+                        </div>
+                        <div class="author-card-back">
+                            <p>frontend dev + paramedic + gamer</p>
+                            <p>=<br><br> best healer you can imagine !</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="author-card">
+                    <div class="author-card-inner">
+                        <div class="author-card-front">
+                            <div class="function-img function-img-2"><img class="function-img-icon"
+                                    src="/icons/beer2.png" alt="sa" /></div>
+                            <p>Maksymilian Tarnoruda</p>
+                        </div>
+                        <div class="author-card-back">
+                            <p>I am king of my castle, riding my dragon to slay goblins with my fire dices!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="author-card">
+                    <div class="author-card-inner">
+                        <div class="author-card-front">
+                            <div class="function-img function-img-2"><img class="function-img-icon"
+                                    src="/icons/beer2.png" alt="sa" /></div>
+                            <p>Piotr Andrzej Bochenek</p>
+                        </div>
+                        <div class="author-card-back">
+                            <p>Juggler, programist/economist & dedicated Settler of Catan. Always proudly carrying a
+                                logic flag into every
+                                fierce battle against dices!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="author">
+                    <div class="function-img function-img-1"><img id="rotate" class="function-img-icon"
+                            src="/icons/hammer2.png" alt="sa" /></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="author">
+                    <div class="function-img function-img-2"><img class="function-img-icon" src="/icons/beer2.png"
+                            alt="sa" /></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="author">
+                    <div class="function-img function-img-3"><img class="function-img-icon" src="/icons/dagger2.png"
+                            alt="sa" /></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div> -->
+                <!-- <div class="author">
+                    <div></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div> -->
+            </div>
+
+        </div>
+    </section>
+    <!-- Subscribe -->
+    <section id="subscribe" class="section_container1 ">
+
+        <div class="container section-subscribe ">
+            <div class="section-subscribe-content">
+                <h2 class="section-subscribe-title">
+                    Subscribe to be first one on board !
+                </h2>
+                <p class="section-subscribe-text">
+                    Only one email will be sent with specific information about release date and premiere of
+                    QuestBoard.
+                    Your privacy is realy important for us , so in order to protect it no personal informaion will
+                    be
+                    collected.
+                </p>
+            </div>
+            <div class="subscribe-inputs">
+                <form>
+                    <div class="subscribe-mail">
+                        <input class="email" type="email" name="email" placeholder="Your email address" id="">
+                        <input class="submit-button" type="submit" name="submit" id="">
+                    </div>
+                    <div class="subscribe-terms">
+                        <label class="check_box" for="check">
+                            <input class="check-box" type="checkbox" name="Privacy policy" required>I have read and
+                            accepted the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+                        </label>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <!-- Extras -->
+    <section id="extras" class="section_container2">
+        <div class="container container_extras">
+            <header class="section_header2">
+                <h2>Extras</h2>
+                <p>All the cool features of our app</p>
+            </header>
+            <div class="extras-divs">
+                <div class="extra">
+                    <div class="function-img function-img-4"><img class="function-img-icon" src="/icons/bow2.png"
+                            alt="sa" /></div>
+                    <h3>Search Feature</h3>
+                    <p>
+                        Our mobile app gives you a handy search bar so that you can find the content you need quickly.
+                    </p>
+                </div>
+                <div class="extra">
+                    <div class="function-img function-img-1"><img class="function-img-icon" src="/icons/axe2.png"
+                            alt="sa" /></div>
+                    <h3>Social Media</h3>
+                    <p>
+                        Social media networking - get in touch with your fellowship.
+                    </p>
+                </div>
+                <div class="extra">
+                    <div class="function-img function-img-2"><img class="function-img-icon" src="/icons/bow2.png"
+                            alt="sa" /></div>
+                    <h3>Responsive Design</h3>
+                    <p>
+                        Responsive mobile app design for varying screen sizes.
+                    </p>
+                </div>
+                <div class="extra">
+                    <div class="function-img function-img-3"><img class="function-img-icon" src="/icons/hatchet2.png"
+                            alt="sa" /></div>
+                    <h3>Rate your party</h3>
+                    <p>
+                        You are given possibility to rate other players, so you always end up with equally nice people.
+                    </p>
+                </div>
+                <div class="extra">
+                    <div class="function-img function-img-4"><img class="function-img-icon" src="/icons/staff2.png"
+                            alt="sa" /></div>
+                    <h3>Adventure in Snapchat</h3>
+                    <p>
+                        Staying with Snapchat and the wonders of augmented reality, gear up your crew with fantasy
+                        equipment and let
+                        the world see you.
+                    </p>
+                </div>
+                <div class="extra">
+                    <div class="function-img function-img-1"><img class="function-img-icon" src="/icons/hammer2.png"
+                            alt="sa" /></div>
+                    <h3>Earn Honor Tokens</h3>
+                    <p>
+                        To be exchanged at beverage of choice in our partnership locals!
+                    </p>
+                </div>
+                <div class="extra">
+                    <div class="function-img function-img-2"><img class="function-img-icon" src="/icons/shield2.png"
+                            alt="sa" /></div>
+                    <h3>World builder</h3>
+                    <p>
+                        We want to hear your suggestion how to create better gaming experience.
+                    </p>
+                </div>
+                <div class="extra">
+                    <div class="function-img function-img-3"><img class="function-img-icon" src="/icons/dagger2.png"
+                            alt="sa" /></div>
+                    <h3>World builder</h3>
+                    <p>
+                        We want to hear your suggestion how to create better gaming experience.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
 
 
-    <section class="container-block section-authors" id="authors">
-      <div class="section-authors-title">
-        <div>
-          <h1 class="carousel-heading">
-            AUTHORS</h1>
-          <p class="carousel-paragraph">
-            Meet the men who play!</p>
-        </div>
-      </div>
-      <div class="information-authors">
-        <div class="personal-data">
-          <img class="Karol-image" src="./icons/pennant_green.png" alt="Karol">
-          <h2 class="carousel-paragraph container-fluid">
-            Karol Nogal</h2>
-          <p class="personal-data-text">
-            fornend dev + paramedic + gamer = best healer you can imagine !
-          </p>
-        </div>
-        <div class="personal-data">
-          <img class="Maxymilian-image" src="./icons/pennant_blue.png" alt="Maksymilian">
-          <h2 class="carousel-paragraph container-fluid">
-            Maksymilian
-            Tarnoruda</h2>
-          <p class="personal-data-text">
-            I am king of my castle, riding my dragon to slay goblins with my fire dices!
-            Personal fan of axes not realy into distance weapons.
-          </p>
-        </div>
-        <div class="personal-data">
-          <img class="Piotr-image" src="./icons/pennant_purple.png" alt="Piotr Andrzej">
-          <h2 class="carousel-paragraph container-fluid">
-            Piotr Andrzej Bochenek</h2>
-          <p class="personal-data-text">
-            Juggler, programist/economist & dedicated Settler of Catan. Always proudly carrying a logic flag into every
-            fierce battle against dices!
-          </p>
-        </div>
-        <div class="personal-data">
-          <img class="Mikołaj-image" src="./icons/pennant_red.png" alt="Mikołaj">
-          <h2 class="carousel-paragraph container-fluid">
-            Mikołaj Sariew</h2>
-          <p class="personal-data-text">
-            Architect of victory and a spacemarine who fights in the name of The only true Emperor Of Mankind!
-          </p>
-        </div>
-      </div>
-    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <section id="footer-phrase">
+            Living, learning, & leveling up one day at a time.
+        </section>
+        <section class="copyrights">
+            Handcrafted by us &#169; 2019 fantasyCode team <img class="program-icon" src="/icons/code2.png"
+                alt="code icon"> Web Design&Developement Students
+        </section>
+    </footer>
 
-    <section id="subscribe" class="container-block">
-      <div class="section-subscribe ">
-        <div class="section-subscribe-content">
-          <h2 class="section-subscribe-title">
-            Subscribe to be first one on board !
-            </h3>
-            <p class="section-subscribe-text">
-              Only one email will be sent with specific information about release date and premiere of QuestBoard.
-              Your privacy is realy important for us , so in order to protect it no personal informaion will be
-              collected.
-            </p>
-        </div>
-        <div class="subscribe-inputs">
-          <form>
-            <input class="email" type="email" name="email" placeholder="Your email address" id="">
-            <input class="submit-button" type="submit" name="submit" id="">
-          </form>
-
-        </div>
-      </div>
-    </section>
-
-    </section>
-    <section class="extras--container-block extras--content" id="extras">
-      <h1 carousel-heading">Extras</h1>
-      <div class="extras--content--container">
-        <div>
-          <h2>Search Feature</h2>
-          <p>
-            Our mobile app gives you a handy search bar so that you can find the content you need quickly.
-          </p>
-        </div>
-
-        <div>
-          <h2>Social Media</h2>
-          <p>
-            Social media networking - get in touch with your fellowship.
-          </p>
-        </div>
-
-        <div>
-          <h2>Responsive Design</h2>
-          <p>
-            Responsive mobile app design for varying screen sizes.
-          </p>
-        </div>
-
-        <div>
-          <h2>Rate your party</h2>
-          <p>
-            You are given possibility to rate other players, so you always end up with equally nice people.
-          </p>
-        </div>
-
-        <div>
-          <h2>Adventure in Snapchat</h2>
-          <p>
-            Staying with Snapchat and the wonders of augmented reality, gear up your crew with fantasy equipment and let
-            the world see you.
-          </p>
-        </div>
-
-        <div>
-          <h2>Earn Honor Tokens</h2>
-          <p>
-            To be exchanged at beverage of choice in our partnership locals!
-          </p>
-        </div>
-
-        <div>
-          <h2>World builder</h2>
-          <p>
-            We want to hear your suggestion how to create better gaming experience.
-          </p>
-        </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© 2019 FantasyCode</p>
-  </footer>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-  crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-  crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- JS -->
+    <script src="/main.js"></script>
 </body>
 
 </html>
