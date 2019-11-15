@@ -30,7 +30,7 @@ table{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* position: relative; */
+
 }
 .map--floor--diff{
     background-image: url(tiles/floor2.png);
@@ -51,129 +51,129 @@ table{
     background-size: cover;
 }
 
-.map_wall--image{
+.map--wall--image{
     background-image: url(tiles/wall.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.map_wall--image--lamp{
+.map--wall--image--lamp{
     background-image: url(tiles//wall1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--image--door{
+.map--wall--image--door{
     background-image: url(tiles/wallDoor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_horizontal{
+.map--wall--horizontal{
     background-image: url(tiles/wallH.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--vertical{
+.map--wall--vertical{
     background-image: url(tiles/wallV.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_top_left--corner{
+.map--wall--top--left--corner{
     background-image: url(tiles/wallCorner1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_top_right--corner{
+.map--wall--top--right--corner{
     background-image: url(tiles/wallCorner2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.map_wall_end--down{
+.map--wall--end--down{
     background-image: url(tiles/wallVEndDown.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;  
 }
-.map_wall_bottom_right--corner{
+.map--wall--bottom--right--corner{
     background-image: url(tiles/wallCorner4.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_bottom_left--corner{
+.map--wall--bottom--left--corner{
     background-image: url(tiles/wallCorner.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--split{
+.map--wall--split{
     background-image: url(tiles/wallIntersectionUp.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_cross{
+.map--wall--cross{
     background-image: url(tiles/wallIntersection.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_end--left{
+.map--wall--end--left{
     background-image: url(tiles/wallHEndleft.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_end--right{
+.map--wall--end--right{
     background-image: url(tiles/wallHEnd.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_end--top{
+.map--wall--end--top{
     background-image: url(tiles/wallVEndUp.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--canal{
+.map--wall--canal{
     background-image: url(tiles/wallSuer.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--wet{
+.map--wall--wet{
     background-image: url(tiles/wallWet.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--edge{
+.map--wall--edge{
     background-image: url(tiles/wallWater.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--drain{
+.map--wall--drain{
     background-image: url(tiles/wallCanal.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--water{
+.map--wall--water{
     background-image: url(tiles/water.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--water--bucket{
+.map--wall--water--bucket{
     background-image: url(tiles/waterBucket.png);
     background-repeat: no-repeat;
     background-position: center;
