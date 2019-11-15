@@ -29,20 +29,5 @@ $('#link-extras').click(() => {
 });
 
 // cookieInfo
-const cookies = document.querySelector(".cookies");
-const cookiesYesBtn = document.querySelector(".cookies-btn-yes");
-const cookiesNoBtn = document.querySelector(".cookies-btn-no");
-const cookiesShow = () => {
-   if (!document.cookies) {
-       cookies.style.display = "block";
-       cookiesYesBtn.addEventListener("click", () => {
-           document.cookies = "Info = ourCookies";
-           cookies.style.display = "none";
-       })
-       cookiesNoBtn.addEventListener("click", () => {
-           alert("Sorry! It's just illusion of choice, you must obey!")
-       })
-   }
-};
-cookiesShow();
+
 // end of cookieInfo
