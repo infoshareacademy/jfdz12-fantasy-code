@@ -1,0 +1,286 @@
+body{
+    background-color:gray;
+}
+
+.mapcontainer{
+    border: 5px solid;
+}
+
+.tablecontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+table{
+    border-spacing: 0px;
+}
+.map-wall{
+    background-color: black;
+}
+.map {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    background-color: gray; 
+}
+.map--floor{
+    background-image: url(tiles/floor.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* position: relative; */
+}
+.map--floor--diff{
+    background-image: url(tiles/floor2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map--floor--hole{
+    background-image: url(tiles/floor1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map--floor--sewer{
+    background-image: url(tiles/floor3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.map_wall--image{
+    background-image: url(tiles/wall.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.map_wall--image--lamp{
+    background-image: url(tiles//wall1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall--image--door{
+    background-image: url(tiles/wallDoor.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall_horizontal{
+    background-image: url(tiles/wallH.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall--vertical{
+    background-image: url(tiles/wallV.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall_top_left--corner{
+    background-image: url(tiles/wallCorner1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall_top_right--corner{
+    background-image: url(tiles/wallCorner2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.map_wall_end--down{
+    background-image: url(tiles/wallVEndDown.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  
+}
+.map_wall_bottom_right--corner{
+    background-image: url(tiles/wallCorner4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall_bottom_left--corner{
+    background-image: url(tiles/wallCorner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall--split{
+    background-image: url(tiles/wallIntersectionUp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall_cross{
+    background-image: url(tiles/wallIntersection.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall_end--left{
+    background-image: url(tiles/wallHEndleft.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall_end--right{
+    background-image: url(tiles/wallHEnd.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall_end--top{
+    background-image: url(tiles/wallVEndUp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall--canal{
+    background-image: url(tiles/wallSuer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall--wet{
+    background-image: url(tiles/wallWet.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall--edge{
+    background-image: url(tiles/wallWater.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall--drain{
+    background-image: url(tiles/wallCanal.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall--water{
+    background-image: url(tiles/water.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map_wall--water--bucket{
+    background-image: url(tiles/waterBucket.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.player{
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.player:before{
+    content: url(tiles/knight.png);
+    position: absolute;
+    top: -41px;
+    left: -23px;
+    transform: scale(.7);
+}
+.monster{
+    background-image: url(tiles/orc.png), url(tiles/floor.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#game--life--container {
+    background-color: lightseagreen;
+    border: solid 1px black;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0.25rem;
+    position: sticky;
+    top: 0;
+ }
+ #game--life--bar {
+    min-width: 5%;
+    background-color: seagreen;
+    padding: 0.5rem 0;
+    border-radius: 1rem;
+    transition-duration: 300ms;
+ }
+
+.apple{
+    background-image: url(tiles/applee.png),url(tiles/floor.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#sprite-image {
+    height: 50px;
+    width: 50px;
+    background: url("chests.png") 0px 0px;
+}
+
+/*  MODAL */
+
+
+
+/* The Modal (background) */
+.modal {
+    font-size: 20px;
+    color: #ff9900;
+    font-weight:800;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #4d1300;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    text-align: center;
+    border: 3px solid #ff9900;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  .button-next {
+    background-color: #e01507;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .button-home {
+    background-color: #0761e0;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
