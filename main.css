@@ -1,4 +1,3 @@
-
 html, body {
     overflow-x: hidden;
 }
@@ -15,7 +14,6 @@ ul {
     padding: 0;
     display: flex;
     justify-content: space-evenly;
-    
 }
 
 a {
@@ -27,7 +25,6 @@ a {
 a:acitve {
     color: white;
 }
-
 
 .inner {
     height: 30vw;
@@ -44,7 +41,6 @@ a:acitve {
     font-size: 5rem;
     color: white;
 }
-
 
 /* .inner::after {
     content: "";
@@ -117,7 +113,6 @@ a:acitve {
     text-align: center;
 }
 
-
 .function-img {
     display: flex;
     align-items: center;
@@ -146,14 +141,12 @@ a:acitve {
     
 } */
 
-
 .function-divs, .authors-divs, .extras-divs {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-
 
 .function, .author, .extra {
     background-color: white;
@@ -170,10 +163,9 @@ a:acitve {
     padding: 5px;
 }
 
-.extra>p{
+.extra>p {
     font-size: 1.5rem;
 }
-
 
 .function>div, .author>div, .extra>div {
     height: 7rem;
@@ -195,7 +187,8 @@ a:acitve {
 }
 
 .subscribe-mail {
-    margin-bottom: 1rem;;
+    margin-bottom: 1rem;
+    ;
 }
 
 .subscribe-terms a {
@@ -210,11 +203,10 @@ a:acitve {
     margin: 0px 0px;
 }
 
-
 .email {
-    width: 20vw;
+    width: 400px;
     height: 50px;
-    font-size: 20px;
+    font-size: 14px;
     color: lightgray;
     padding: 0px 19px;
 }
@@ -227,7 +219,6 @@ a:acitve {
     color: white;
     font-weight: bold;
 }
-
 
 /* Footer */
 
@@ -266,8 +257,6 @@ a:acitve {
 
 /*  SPIN */
 
-
-
 /* .author {
     transition: 1s linear;
 }
@@ -277,6 +266,7 @@ a:acitve {
 } */
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
 .author-card {
     width: 300px;
     height: 400px;
@@ -284,11 +274,13 @@ a:acitve {
     border-radius: 5px;
     background-color: transparent;
     transition: 1s linear;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .author-card-inner {
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+
+.author-card-inner {
     position: relative;
     border-radius: 5px;
     width: 100%;
@@ -296,38 +288,47 @@ a:acitve {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .author-card:hover .author-card-inner {
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+.author-card:hover .author-card-inner {
     transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .author-card-front, .author-card-back {
+}
+
+/* Position the front and back side */
+
+.author-card-front, .author-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .author-card-front {
+}
+
+/* Style the front side (fallback if image is missing) */
+
+.author-card-front {
     background-color: #bbb;
     border-radius: 5px;
     color: black;
-  }
-  
-  /* Style the back side */
-  .author-card-back {
+}
+
+/* Style the back side */
+
+.author-card-back {
     background-color: dodgerblue;
     border-radius: 5px;
     color: white;
     transform: rotateY(180deg);
-  }
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  /* Cookies */
- .cookies {
+/* Cookies */
+
+.cookies {
     position: fixed;
     text-align: center;
     bottom: 5%;
@@ -338,37 +339,70 @@ a:acitve {
     padding: 25px;
     border-radius: 5px;
     width: 400px;
- }
- @media (max-width: 450px) {
+}
+
+.cookies>h4, .cookies>p {
+    color: white;
+}
+
+.cookies>p {
+    font-size: 1rem;
+}
+
+.cookies-btn, .cookies-btn:visited {
+    background-color: rgb(61, 47, 78);
+    color: white;
+    width: 70px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.cookies-btn:hover, .cookies-btn:active {
+    background-color: #9b53df;
+    color: black;
+    border-radius: 4px;
+    border: none;
+}
+
+@media (max-width: 450px) {
     .cookies {
         width: 90%;
     }
- }
+}
 
- .cookies > h4, .cookies > p {
-     color: white;
- }
+@media only screen and (max-width: 768px) {
+    #header ul {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #header li {
+        flex-basis: 100%;
+        text-align: center;
+        display: block;
+    }
+    .cookies {
+        bottom: 0%;
+        right: 0%;
+        border-radius: 0;
+    }
 
- .cookies > p {
-     font-size: 1rem;
- }
+    .inner {
+        font-size: 1rem;
+        color: white;
+    }
 
- .cookies-btn,
- .cookies-btn:visited {
-  background-color: rgb(61, 47, 78);
-  color: white;
-  width: 70px;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 4px;
-  cursor: pointer;
-  border: none;
- }
- .cookies-btn:hover,
- .cookies-btn:active {
-  background-color: #9b53df;
-  color: black;
-  border-radius: 4px;
-  border: none;
- }
+    .inner>h2 {
+        margin: 1rem;
+    }
 
+    .email{
+        width: 80vw;
+    }
+}

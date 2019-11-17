@@ -1,6 +1,10 @@
-const map = document.querySelector('.tablecontainer');
+window.onkeydown = function (event) {
+  if (event.keyCode === 32) {
+      event.preventDefault();
+  }
+};
 
-const LIFE_PORTION = Math.floor(Math.random() * 25);
+const map = document.querySelector('.tablecontainer');
 
 class Player {
   constructor() {
@@ -70,7 +74,7 @@ monsters.forEach(monster => {
       monster.domElement.nextElementSibling.classList.contains('player')
     ) {
 
-      life -= LIFE_PORTION;
+      life -= Math.floor(Math.random() * 10) +1;
       renderLife()
 
     } else {
@@ -89,8 +93,8 @@ const playerAttack = () => {
     const index = [...player.parentElement.children].indexOf(player);
 
     if (
-      player.previousElementSibling.classList === monster.domElement ||
-      player.nextElementSibling.classList === monster.domElement ||
+      player.previousElementSibling === monster.domElement ||
+      player.nextElementSibling === monster.domElement ||
       player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`) === monster.domElement ||
       player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`) === monster.domElement
     ) {
@@ -102,6 +106,7 @@ const playerAttack = () => {
       console.log(monster)
       if (monster.life === 0) {
         monster.domElement.classList.remove("monster");
+        monster.domElement.classList.remove("map-wall");
         clearInterval(monster.intervalId);
         monsters.filter(monster => monster.live > 0)
       }
@@ -140,6 +145,7 @@ function renderLife() {
   } else {
     lifeBar.innerHTML = '0%';
     lifeBar.appendChild(heart);
+    displayGameOverModal();
     // alert("Your smelly corpse is rotting in dungeon, better luck next time!");
   };
 };
@@ -151,7 +157,7 @@ document.addEventListener('keydown', (e) => {
     case 32:
 
       if (playerPosition.previousElementSibling.classList.contains("monster") ||
-        playerPosition.previousElementSibling.classList.contains("monster") ||
+        playerPosition.nextElementSibling.classList.contains("monster") ||
         playerPosition.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster") ||
         playerPosition.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster")
       )
@@ -170,6 +176,12 @@ function displayModal() {
   modal.style.display = "block";
 }
 
+const gameOverModal = document.getElementById("myGameOverModal");
+function displayGameOverModal() {
+  gameOverModal.style.display = "block";
+}
+
+
 // Chest animation
 // warto dodatkowo zatrzymac wszystkie zbedne skrypty?
 
@@ -184,7 +196,7 @@ function startAnimation() {
   const diff = widthOfEachChestSprite; //difference between two sprites
   const speed = 1500;
   spriteSheet.style.backgroundPosition = `-${position}px 0px`;
-  
+
 
   setTimeout(function () {
     if (position < widthOfChestSpriteSheet) {
@@ -214,11 +226,11 @@ document.addEventListener('keydown', (e) => {
     case 32:
 
       if (scanForThreats === 0 && (playerPosition.previousElementSibling.classList.contains("chest") ||
-        playerPosition.previousElementSibling.classList.contains("chest") ||
+        playerPosition.nextElementSibling.classList.contains("chest") ||
         playerPosition.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("chest") ||
         playerPosition.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("chest")
       )) {
-        scoreParagraph.textContent += `${score}`;  
+        scoreParagraph.textContent += `${score}`;
         startAnimation();
       }
       break;
