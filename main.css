@@ -401,4 +401,8 @@ a:acitve {
     .inner>h2 {
         margin: 1rem;
     }
+
+    .email{
+        width: 80vw;
+    }
 }
