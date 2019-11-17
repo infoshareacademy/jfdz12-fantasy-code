@@ -33,14 +33,15 @@ const cookies = document.querySelector(".cookies");
 const cookiesYesBtn = document.querySelector(".cookies-btn-yes");
 const cookiesNoBtn = document.querySelector(".cookies-btn-no");
 const cookiesShow = () => {
-   if (!document.cookies) {
+    console.log(document.cookie)
+   if (!document.cookie) {
        cookies.style.display = "block";
        cookiesYesBtn.addEventListener("click", () => {
-           document.cookies = "Info = ourCookies";
+           document.cookie = "Info = cookies";
            cookies.style.display = "none";
        })
        cookiesNoBtn.addEventListener("click", () => {
-           alert("Sorry! It's just illusion of choice, you must obey!")
+           alert("Sorry! You must accept!")
        })
    }
 };
