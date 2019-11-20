@@ -85,7 +85,7 @@
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--floor monster"></td>
+                    <td class="map map--floor monster map-wall"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--wall map--wall--wet"></td>
                     <td class="map map--wall map--wall--canal"></td>
@@ -93,7 +93,7 @@
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor--diff"></td>
-                    <td class="map map--floor chest">
+                    <td class="map map--floor chest map-wall">
                         <div id="sprite-container">
                             <div id="sprite-image"></div>
                         </div>
@@ -147,7 +147,7 @@
                     <td class="map map--wall map--wall--water"></td>
                     <td class="map map--wall map--wall--water"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--floor"></td>
+                    <td class="map map--floor monster map-wall"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
@@ -182,12 +182,12 @@
                 <tr>
                     <td class="map map--wall map--wall--vertical"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--floor apple"></td>
+                    <td class="map map--floor"></td>
                     <td class="map map--floor--sewer"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--wall map--wall--vertical"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--floor monster"></td>
+                    <td class="map map--floor monster map-wall"></td>
                     <td class="map map--floor--diff"></td>
                     <td class="map map--floor--hole"></td>
                     <td class="map map--floor"></td>
@@ -324,7 +324,7 @@
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--floor"></td>
+                    <td class="map map--floor apple"></td>
                     <td class="map map--wall map--wall--vertical"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
@@ -393,7 +393,7 @@
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor--diff"></td>
-                    <td class="map map--floor--diff"></td>
+                    <td class="map map--floor monster map-wall"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
@@ -434,7 +434,7 @@
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor--hole"></td>
-                    <td class="map map--floor"></td>
+                    <td class="map map--floor monster map-wall"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--wall map--wall--vertical"></td>
@@ -501,6 +501,18 @@
                         <p>Dear adventurer you have completed the quest, rejoice!</p>
                         <p id="score">Your score: </p>
                         <a href="./game.html" class="button-next">Adventure Deeper</a>
+                        <a href="../index.html" class="button-home">Take Portal to Town</a>
+                    </div>
+                </div>
+
+                <!-- The GameOver Modal -->
+                <div id="myGameOverModal" class="gameOverModal">
+
+                    <!-- Modal content -->
+                    <div class="gameOverModal-content">
+                        <p>You are dead!</p>
+                        <p>Better luck next time!</p>
+                        <a href="./game.html" class="button-next">Try again</a>
                         <a href="../index.html" class="button-home">Take Portal to Town</a>
                     </div>
                 </div>
