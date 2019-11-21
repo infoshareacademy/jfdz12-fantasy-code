@@ -18,7 +18,7 @@ class Player {
 
     this.element.classList.remove('player');
     where.classList.add("player");
-    aplle();
+    apple();
   }
 
   handleMove(direction) {
@@ -116,7 +116,7 @@ const playerAttack = () => {
 
 
 const applePosition = document.querySelector(".apple");
-const aplle = () => {
+const apple = () => {
   if (applePosition.classList.contains("player")) {
     heal();
     applePosition.classList.remove("apple")
