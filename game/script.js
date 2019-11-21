@@ -72,11 +72,11 @@ monsters.forEach(monster => {
       monster.domElement.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
       monster.domElement.previousElementSibling.classList.contains('player') ||
       monster.domElement.nextElementSibling.classList.contains('player')
-    ) {
-
-      life -= Math.floor(Math.random() * 10) +1;
-      renderLife()
-
+    ) { 
+      if (life > 0) {
+        life -= Math.floor(Math.random() * 10) +1;
+        renderLifeBar()
+      }
     } else {
       return;
     }
@@ -108,7 +108,7 @@ const playerAttack = () => {
         monster.domElement.classList.remove("monster");
         monster.domElement.classList.remove("map--wall");
         clearInterval(monster.intervalId);
-        monsters.filter(monster => monster.live > 0)
+        monsters.filter(monster => monster.life > 0)
       }
     }
   })
@@ -128,30 +128,26 @@ const apple = () => {
 const heal = () => {
   life += 50;
   if (life > 100) life = 100;
-  renderLife();
+  renderLifeBar();
 }
 
 let life = 100;
 
-//heart poza funkcję
-//poprawić działanie funkcji (append, innerHTML)
-//zmiana nazwy z renderLife na renderLifeBar
-//funkcja changeLife zamiast heal i utraty życia w monsterze
+let lifeBar = document.getElementById('game--life--bar');
+let lifeLevel = document.getElementById('game--life--level');
 
-function renderLife() {
-  const heart = document.createElement('img');
-  heart.src = "./img/heart.png";
-  heart.style.width = "1em";
-  let lifeBar = document.getElementById('game--life--bar');
+//IDEA - let lifePortion = 1;
+//IDEA - funkcja changeLife zamiast heal i utraty życia w monsterze
+
+function renderLifeBar() {
   lifeBar.style.width = `${life}%`;
+  lifeLevel.innerHTML = '';
   if (life > 0) {
-    lifeBar.innerHTML = `${life}%`;
-    lifeBar.appendChild(heart);
+    lifeLevel.appendChild(document.createTextNode(` ${life}%`));
   } else {
-    lifeBar.innerHTML = '0%';
-    lifeBar.appendChild(heart);
+    lifeLevel.appendChild(document.createTextNode(` 0%`));
     displayGameOverModal();
-    // alert("Your smelly corpse is rotting in dungeon, better luck next time!");
+    return;
   };
 };
 

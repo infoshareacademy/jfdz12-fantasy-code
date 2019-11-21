@@ -205,7 +205,7 @@ table{
     text-align: center;
     margin: 0.25rem;
     position: sticky;
-    top: 0;
+    top: 0.5rem;
  }
  #game--life--bar {
     min-width: 5%;
@@ -213,6 +213,10 @@ table{
     padding: 0.5rem 0;
     border-radius: 1rem;
     transition-duration: 300ms;
+ }
+
+ #game--life--img, #game--life--level {
+    display: inline;
  }
 
 .apple{
