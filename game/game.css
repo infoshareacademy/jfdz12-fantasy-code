@@ -222,7 +222,7 @@ table{
     background-size: cover;
 }
 
-#sprite-img {
+#sprite--img {
     height: 50px;
     width: 50px;
     background: url("./img/chests.png") 0px 0px;
