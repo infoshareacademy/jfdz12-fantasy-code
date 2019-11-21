@@ -140,7 +140,7 @@ let life = 100;
 
 function renderLife() {
   const heart = document.createElement('img');
-  heart.src = "tiles/heart.png";
+  heart.src = "./img/heart.png";
   heart.style.width = "1em";
   let lifeBar = document.getElementById('game--life--bar');
   lifeBar.style.width = `${life}%`;

@@ -186,14 +186,14 @@ table{
 }
 
 .player:before{
-    content: url(tiles/knight.png);
+    content: url(./img/knight.png);
     position: absolute;
     top: -41px;
     left: -23px;
     transform: scale(.7);
 }
 .monster{
-    background-image: url(tiles/orc.png), url(tiles/floor.png);
+    background-image: url(./img/orc.png), url(tiles/floor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -216,7 +216,7 @@ table{
  }
 
 .apple{
-    background-image: url(tiles/applee.png),url(tiles/floor.png);
+    background-image: url(./img/apple.png),url(tiles/floor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -225,7 +225,7 @@ table{
 #sprite-image {
     height: 50px;
     width: 50px;
-    background: url("chests.png") 0px 0px;
+    background: url("./img/chests.png") 0px 0px;
 }
 
 /*  MODAL */
