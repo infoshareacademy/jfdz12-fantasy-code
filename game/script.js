@@ -4,7 +4,7 @@ window.onkeydown = function (event) {
   }
 };
 
-const map = document.querySelector('.tablecontainer');
+const map = document.querySelector('.table--container');
 
 class Player {
   constructor() {
@@ -12,7 +12,7 @@ class Player {
   }
 
   move(where) {
-    if (!where || where.classList.contains("map-wall")) {
+    if (!where || where.classList.contains("map--wall")) {
       return;
     }
 
@@ -106,7 +106,7 @@ const playerAttack = () => {
       console.log(monster)
       if (monster.life === 0) {
         monster.domElement.classList.remove("monster");
-        monster.domElement.classList.remove("map-wall");
+        monster.domElement.classList.remove("map--wall");
         clearInterval(monster.intervalId);
         monsters.filter(monster => monster.live > 0)
       }
@@ -191,7 +191,7 @@ function displayGameOverModal() {
 // warto dodatkowo zatrzymac wszystkie zbedne skrypty?
 
 
-const spriteSheet = document.getElementById("sprite-image");
+const spriteSheet = document.getElementById("sprite--img");
 const widthOfChestSpriteSheet = 100;
 const widthOfEachChestSprite = 50;
 

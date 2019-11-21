@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    <div class="game-container">
+    <div>
         <div id="game--life--container">
             <div id="game--life--bar">
                 <img src="./img/heart.png" alt="heart" width="16em">
                 100%
             </div>
         </div>
-        <table class="tablecontainer">
-            <tbody class="mapcontainer">
+        <table class="table--container">
+            <tbody class="map--container">
                 <tr>
                     <td class="map map--wall--top--left--corner"></td>
                     <td class="map map--wall--horizontal"></td>
@@ -47,28 +47,28 @@
                 </tr>
                 <tr>
                     <td class="map map--wall map--wall--vertical"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image--lamp"></td>
-                    <td class="map map--wall map--wall--image--door"></td>
-                    <td class="map map--wall map--wall--image--lamp"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img--lamp"></td>
+                    <td class="map map--wall map--wall--img--door"></td>
+                    <td class="map map--wall map--wall--img--lamp"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
                     <td class="map map--wall map--wall--vertical"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image--lamp"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image--lamp"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img--lamp"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img--lamp"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
                     <td class="map map--wall map--wall--vertical"></td>
                 </tr>
                 <tr>
@@ -85,7 +85,7 @@
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--floor monster map-wall"></td>
+                    <td class="map map--floor monster map--wall"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--wall map--wall--wet"></td>
                     <td class="map map--wall map--wall--canal"></td>
@@ -93,9 +93,9 @@
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor--diff"></td>
-                    <td class="map map--floor chest map-wall">
-                        <div id="sprite-container">
-                            <div id="sprite-image"></div>
+                    <td class="map map--floor chest map--wall">
+                        <div id="sprite--container">
+                            <div id="sprite--img"></div>
                         </div>
                     </td>
                     <td class="map map--floor"></td>
@@ -136,10 +136,10 @@
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image--lamp"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img--lamp"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
@@ -147,7 +147,7 @@
                     <td class="map map--wall map--wall--water"></td>
                     <td class="map map--wall map--wall--water"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--floor monster map-wall"></td>
+                    <td class="map map--floor monster map--wall"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
@@ -155,8 +155,8 @@
                 </tr>
                 <tr>
                     <td class="map map--wall map--wall--vertical"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--wall map--wall--end--top"></td>
@@ -187,7 +187,7 @@
                     <td class="map map--floor"></td>
                     <td class="map map--wall map--wall--vertical"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--floor monster map-wall"></td>
+                    <td class="map map--floor monster map--wall"></td>
                     <td class="map map--floor--diff"></td>
                     <td class="map map--floor--hole"></td>
                     <td class="map map--floor"></td>
@@ -199,7 +199,7 @@
                     <td class="map map--wall map--wall--water"></td>
                     <td class="map map--wall map--wall--water"></td>
                     <td class="map map--wall map--wall--water"></td>
-                    <td class="map  map--floor"></td>
+                    <td class="map map--floor"></td>
                     <td class="map map--wall map--wall--water"></td>
                     <td class="map map--wall map--wall--water--bucket"></td>
                     <td class="map map--wall map--wall--water"></td>
@@ -217,7 +217,7 @@
                     <td class="map map--floor--diff"></td>
                     <td class="map map--floor--diff"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--wall--image"></td>
+                    <td class="map map--wall--img"></td>
                     <td class="map map--wall map--wall--vertical"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
@@ -276,7 +276,7 @@
                     <td class="map map--wall map--wall--top--right--corner"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
-                    <td class="map  map--wall map--wall--vertical"></td>
+                    <td class="map map--wall map--wall--vertical"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor--diff"></td>
                     <td class="map map--floor"></td>
@@ -289,20 +289,20 @@
                     <td class="map map--floor--diff"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image--lamp"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image--lamp"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image--lamp"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img--lamp"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img--lamp"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img--lamp"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
                     <td class="map map--wall map--wall--vertical"></td>s
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--wall map--wall--image--lamp"></td>
+                    <td class="map map--wall map--wall--img--lamp"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
@@ -393,20 +393,20 @@
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor--diff"></td>
-                    <td class="map map--floor monster map-wall"></td>
+                    <td class="map map--floor monster map--wall"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor--diff"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map--wall map--wall--image--lamp"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image--lamp "></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image"></td>
-                    <td class="map map--wall map--wall--image--lamp "></td>
+                    <td class="map map--wall map--wall--img--lamp"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img--lamp "></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img"></td>
+                    <td class="map map--wall map--wall--img--lamp "></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
@@ -424,7 +424,7 @@
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
-                    <td class="map map map--wall map--wall--end--top"></td>
+                    <td class="map map--wall map--wall--end--top"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
@@ -434,7 +434,7 @@
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor--hole"></td>
-                    <td class="map map--floor monster map-wall"></td>
+                    <td class="map map--floor monster map--wall"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--floor"></td>
                     <td class="map map--wall map--wall--vertical"></td>
@@ -496,12 +496,12 @@
                 <div id="myModal" class="modal">
 
                     <!-- Modal content -->
-                    <div class="modal-content">
+                    <div class="modal--content">
                         <p>Victory!</p>
                         <p>Dear adventurer you have completed the quest, rejoice!</p>
                         <p id="score">Your score: </p>
-                        <a href="./game.html" class="button-next">Adventure Deeper</a>
-                        <a href="../index.html" class="button-home">Take Portal to Town</a>
+                        <a href="./game.html" class="button--next">Adventure Deeper</a>
+                        <a href="../index.html" class="button--home">Take Portal to Town</a>
                     </div>
                 </div>
 
@@ -509,11 +509,11 @@
                 <div id="myGameOverModal" class="gameOverModal">
 
                     <!-- Modal content -->
-                    <div class="gameOverModal-content">
+                    <div class="gameOverModal--content">
                         <p>You are dead!</p>
                         <p>Better luck next time!</p>
-                        <a href="./game.html" class="button-next">Try again</a>
-                        <a href="../index.html" class="button-home">Take Portal to Town</a>
+                        <a href="./game.html" class="button--next">Try again</a>
+                        <a href="../index.html" class="button--home">Take Portal to Town</a>
                     </div>
                 </div>
 

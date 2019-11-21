@@ -2,11 +2,11 @@ body{
     background-color:gray;
 }
 
-.mapcontainer{
+.map--container{
     border: 5px solid;
 }
 
-.tablecontainer{
+.table--container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@ body{
 table{
     border-spacing: 0px;
 }
-.map-wall{
+.map--wall{
     background-color: black;
 }
 .map {
@@ -51,20 +51,20 @@ table{
     background-size: cover;
 }
 
-.map--wall--image{
+.map--wall--img{
     background-image: url(tiles/wall.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.map--wall--image--lamp{
+.map--wall--img--lamp{
     background-image: url(tiles//wall1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map--wall--image--door{
+.map--wall--img--door{
     background-image: url(tiles/wallDoor.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -222,7 +222,7 @@ table{
     background-size: cover;
 }
 
-#sprite-image {
+#sprite-img {
     height: 50px;
     width: 50px;
     background: url("./img/chests.png") 0px 0px;
@@ -250,7 +250,7 @@ table{
   }
   
   /* Modal Content/Box */
-  .modal-content {
+  .modal--content {
     background-color: #4d1300;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -259,7 +259,7 @@ table{
     width: 80%; /* Could be more or less, depending on screen size */
   }
   
-  .button-next {
+  .button--next {
     background-color: #e01507;
     border: none;
     color: white;
@@ -272,7 +272,7 @@ table{
     cursor: pointer;
   }
   
-  .button-home {
+  .button--home {
     background-color: #0761e0;
     border: none;
     color: white;
@@ -308,7 +308,7 @@ table{
   }
   
   /* Modal Content/Box */
-  .gameOverModal-content {
+  .gameOverModal--content {
     background-color: #4d1300;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -317,7 +317,7 @@ table{
     width: 80%; /* Could be more or less, depending on screen size */
   }
   
-  .button-next {
+  .button--next {
     background-color: #e01507;
     border: none;
     color: white;
@@ -330,7 +330,7 @@ table{
     cursor: pointer;
   }
   
-  .button-home {
+  .button--home {
     background-color: #0761e0;
     border: none;
     color: white;
