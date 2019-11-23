@@ -3,8 +3,8 @@ window.onkeydown = function (event) {
       event.preventDefault();
   }
 };
-
-const map = document.querySelector('.table--container');
+// IDEA: is this really needed?
+// const map = document.querySelector('.table-container');
 
 class Player {
   constructor() {
@@ -12,7 +12,7 @@ class Player {
   }
 
   move(where) {
-    if (!where || where.classList.contains("map--wall")) {
+    if (!where || where.classList.contains("map__tile--wall")) {
       return;
     }
 
@@ -106,7 +106,7 @@ const playerAttack = () => {
       console.log(monster)
       if (monster.life === 0) {
         monster.domElement.classList.remove("monster");
-        monster.domElement.classList.remove("map--wall");
+        monster.domElement.classList.remove("map__tile--wall");
         clearInterval(monster.intervalId);
         monsters.filter(monster => monster.life > 0)
       }
@@ -115,11 +115,11 @@ const playerAttack = () => {
 }
 
 
-const applePosition = document.querySelector(".apple");
+const applePosition = document.querySelector(".map__item--apple");
 const apple = () => {
   if (applePosition.classList.contains("player")) {
     heal();
-    applePosition.classList.remove("apple")
+    applePosition.classList.remove("map__item--apple")
   } else {
     return;
   }
@@ -133,19 +133,19 @@ const heal = () => {
 
 let life = 100;
 
-let lifeBar = document.getElementById('game--life--bar');
-let lifeLevel = document.getElementById('game--life--level');
+const lifeBar = document.getElementById('life__display--bar');
+const lifeCurrentLevel = document.getElementById('life__display--currentLevel');
 
 //IDEA - let lifePortion = 1;
 //IDEA - funkcja changeLife zamiast heal i utraty życia w monsterze
 
 function renderLifeBar() {
   lifeBar.style.width = `${life}%`;
-  lifeLevel.innerHTML = '';
+  lifeCurrentLevel.innerHTML = '';
   if (life > 0) {
-    lifeLevel.appendChild(document.createTextNode(` ${life}%`));
+    lifeCurrentLevel.appendChild(document.createTextNode(` ${life}%`));
   } else {
-    lifeLevel.appendChild(document.createTextNode(` 0%`));
+    lifeCurrentLevel.appendChild(document.createTextNode(` 0%`));
     displayGameOverModal();
     return;
   };
@@ -172,9 +172,9 @@ document.addEventListener('keydown', (e) => {
 
 // Modal
 
-const modal = document.getElementById("myModal");
-function displayModal() {
-  modal.style.display = "block";
+const victoryModal = document.getElementById("myVictoryModal");
+function displayVictoryModal() {
+  victoryModal.style.display = "block";
 }
 
 const gameOverModal = document.getElementById("myGameOverModal");
@@ -187,7 +187,7 @@ function displayGameOverModal() {
 // warto dodatkowo zatrzymac wszystkie zbedne skrypty?
 
 
-const spriteSheet = document.getElementById("sprite--img");
+const spriteSheet = document.getElementById("map__item--sprite--img");
 const widthOfChestSpriteSheet = 100;
 const widthOfEachChestSprite = 50;
 
@@ -207,7 +207,7 @@ function startAnimation() {
     }
   }, speed);
 
-  setTimeout(displayModal, 1000);
+  setTimeout(displayVictoryModal, 1000);
 }
 
 // Open chest & show score in Modal
@@ -216,7 +216,7 @@ function startAnimation() {
 // zaimplementuj strone ta - nowastrona.htlm i reszte tych plikow
 //zrob obrazki jablka i potworow (wyczysc je z tla) a jablko ogarnij zeby byl sprite i zeby sie obracalo
 
-const scoreParagraph = document.getElementById("score");
+const scoreParagraph = document.getElementById("victoryModal__score");
 
 document.addEventListener('keydown', (e) => {
   const playerPosition = document.querySelector(".player");
@@ -226,10 +226,10 @@ document.addEventListener('keydown', (e) => {
   switch (e.keyCode) {
     case 32:
 
-      if (scanForThreats === 0 && (playerPosition.previousElementSibling.classList.contains("chest") ||
-        playerPosition.nextElementSibling.classList.contains("chest") ||
-        playerPosition.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("chest") ||
-        playerPosition.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("chest")
+      if (scanForThreats === 0 && (playerPosition.previousElementSibling.classList.contains("map__item--chest") ||
+        playerPosition.nextElementSibling.classList.contains("map__item--chest") ||
+        playerPosition.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("map__item--chest") ||
+        playerPosition.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("map__item--chest")
       )) {
         scoreParagraph.textContent += `${score}`;
         startAnimation();
@@ -237,7 +237,6 @@ document.addEventListener('keydown', (e) => {
       break;
   }
 });
-
 
 // const newMap = [
 //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
