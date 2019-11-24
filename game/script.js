@@ -3,8 +3,8 @@ window.onkeydown = function (event) {
       event.preventDefault();
   }
 };
-
-const map = document.querySelector('.tablecontainer');
+// IDEA: is this really needed?
+// const map = document.querySelector('.table-container');
 
 class Player {
   constructor() {
@@ -12,13 +12,13 @@ class Player {
   }
 
   move(where) {
-    if (!where || where.classList.contains("map-wall")) {
+    if (!where || where.classList.contains("map__tile--wall")) {
       return;
     }
 
     this.element.classList.remove('player');
     where.classList.add("player");
-    aplle();
+    apple();
   }
 
   handleMove(direction) {
@@ -72,11 +72,11 @@ monsters.forEach(monster => {
       monster.domElement.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
       monster.domElement.previousElementSibling.classList.contains('player') ||
       monster.domElement.nextElementSibling.classList.contains('player')
-    ) {
-
-      life -= Math.floor(Math.random() * 10) +1;
-      renderLife()
-
+    ) { 
+      if (life > 0) {
+        life -= Math.floor(Math.random() * 10) +1;
+        renderLifeBar()
+      }
     } else {
       return;
     }
@@ -106,20 +106,20 @@ const playerAttack = () => {
       console.log(monster)
       if (monster.life === 0) {
         monster.domElement.classList.remove("monster");
-        monster.domElement.classList.remove("map-wall");
+        monster.domElement.classList.remove("map__tile--wall");
         clearInterval(monster.intervalId);
-        monsters.filter(monster => monster.live > 0)
+        monsters.filter(monster => monster.life > 0)
       }
     }
   })
 }
 
 
-const applePosition = document.querySelector(".apple");
-const aplle = () => {
+const applePosition = document.querySelector(".map__item--apple");
+const apple = () => {
   if (applePosition.classList.contains("player")) {
     heal();
-    applePosition.classList.remove("apple")
+    applePosition.classList.remove("map__item--apple")
   } else {
     return;
   }
@@ -128,25 +128,26 @@ const aplle = () => {
 const heal = () => {
   life += 50;
   if (life > 100) life = 100;
-  renderLife();
+  renderLifeBar();
 }
 
 let life = 100;
 
-function renderLife() {
-  const heart = document.createElement('img');
-  heart.src = "tiles/heart.png";
-  heart.style.width = "1em";
-  let lifeBar = document.getElementById('game--life--bar');
+const lifeBar = document.getElementById('life__display--bar');
+const lifeCurrentLevel = document.getElementById('life__display--currentLevel');
+
+//IDEA - let lifePortion = 1;
+//IDEA - funkcja changeLife zamiast heal i utraty życia w monsterze
+
+function renderLifeBar() {
   lifeBar.style.width = `${life}%`;
+  lifeCurrentLevel.innerHTML = '';
   if (life > 0) {
-    lifeBar.innerHTML = `${life}%`;
-    lifeBar.appendChild(heart);
+    lifeCurrentLevel.appendChild(document.createTextNode(` ${life}%`));
   } else {
-    lifeBar.innerHTML = '0%';
-    lifeBar.appendChild(heart);
+    lifeCurrentLevel.appendChild(document.createTextNode(` 0%`));
     displayGameOverModal();
-    // alert("Your smelly corpse is rotting in dungeon, better luck next time!");
+    return;
   };
 };
 
@@ -171,9 +172,9 @@ document.addEventListener('keydown', (e) => {
 
 // Modal
 
-const modal = document.getElementById("myModal");
-function displayModal() {
-  modal.style.display = "block";
+const victoryModal = document.getElementById("myVictoryModal");
+function displayVictoryModal() {
+  victoryModal.style.display = "block";
 }
 
 const gameOverModal = document.getElementById("myGameOverModal");
@@ -186,7 +187,7 @@ function displayGameOverModal() {
 // warto dodatkowo zatrzymac wszystkie zbedne skrypty?
 
 
-const spriteSheet = document.getElementById("sprite-image");
+const spriteSheet = document.getElementById("map__item--sprite--img");
 const widthOfChestSpriteSheet = 100;
 const widthOfEachChestSprite = 50;
 
@@ -206,7 +207,7 @@ function startAnimation() {
     }
   }, speed);
 
-  setTimeout(displayModal, 1000);
+  setTimeout(displayVictoryModal, 1000);
 }
 
 // Open chest & show score in Modal
@@ -215,7 +216,7 @@ function startAnimation() {
 // zaimplementuj strone ta - nowastrona.htlm i reszte tych plikow
 //zrob obrazki jablka i potworow (wyczysc je z tla) a jablko ogarnij zeby byl sprite i zeby sie obracalo
 
-const scoreParagraph = document.getElementById("score");
+const scoreParagraph = document.getElementById("victoryModal__score");
 
 document.addEventListener('keydown', (e) => {
   const playerPosition = document.querySelector(".player");
@@ -225,10 +226,10 @@ document.addEventListener('keydown', (e) => {
   switch (e.keyCode) {
     case 32:
 
-      if (scanForThreats === 0 && (playerPosition.previousElementSibling.classList.contains("chest") ||
-        playerPosition.nextElementSibling.classList.contains("chest") ||
-        playerPosition.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("chest") ||
-        playerPosition.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("chest")
+      if (scanForThreats === 0 && (playerPosition.previousElementSibling.classList.contains("map__item--chest") ||
+        playerPosition.nextElementSibling.classList.contains("map__item--chest") ||
+        playerPosition.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("map__item--chest") ||
+        playerPosition.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("map__item--chest")
       )) {
         scoreParagraph.textContent += `${score}`;
         startAnimation();
@@ -236,7 +237,6 @@ document.addEventListener('keydown', (e) => {
       break;
   }
 });
-
 
 // const newMap = [
 //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -290,92 +290,3 @@ document.addEventListener('keydown', (e) => {
 // we - wall edge
 // ww - water
 // wwb - water bucket
-// 
-// 
-// 
-// 
-// 
-
-
-
-
-
-// document.addEventListener('keydown',(e)=>{
-//   const player = document.querySelector(".player");
-//   const index = [...player.parentElement.children].indexOf(player);
-//   switch(e.keyCode){
-//     case 37:
-//       const prev = player.previousElementSibling;
-//       if(!prev || prev.classList.contains("map-wall")){return
-//       }
-//       prev.classList.add("player");
-//       player.classList.remove('player');
-
-//       break;
-//     case 39:
-//      const next = player.nextElementSibling
-//         if(!next || next.classList.contains("map-wall")){return}
-//       next.classList.add("player"); 
-//       player.classList.remove('player');
-
-//       break;
-//     case 38:
-//       const upwardsElement = player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`);
-//       if(!upwardsElement || upwardsElement.classList.contains("map-wall")){return}
-//       upwardsElement.classList.add('player');
-//       player.classList.remove('player');
-//           break;
-//     case 40: 
-//       const downwardElement = player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`);
-//       if(!downwardElement || downwardElement.classList.contains("map-wall")){return}
-//       downwardElement.classList.add('player');
-//       player.classList.remove('player');
-
-//           break;
-//   };
-// });
-
-
-
-
-
-
-// document.addEventListener('keydown', (e) => {
-//   const player = document.querySelector('.player');
-
-//   switch(e.keyCode) {
-//       case 37:
-//           //left
-//           player.previousElementSibling.classList.add('player');
-//           player.classList.remove('player');
-//           break;
-
-//       case 39:
-//           //right
-//           player.nextElementSibling.classList.add('player');
-//           player.classList.remove('player');
-//           break;
-
-//       case 38:
-//           //up
-//           break;
-//       case 40:
-//           //down
-//           const index = [...player.parentElement.children].indexOf(player);
-//           player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.add('player');
-//           player.classList.remove('player');
-//           break;
-//   }
-// })
-
-
-// addEventListener('keydown', (e) => {
-//   if (player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('monster')
-//     || player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('monster')
-//     || player.previousElementSibling.classList.contains("monster")
-//     || player.nextElementSibling.classList.contains("monster")) {
-//     for (e.keyCode === 32) {
-//       playerAttack();
-//     }
-//   }
-// })
