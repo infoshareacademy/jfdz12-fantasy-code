@@ -1,4 +1,10 @@
-const map = document.querySelector('.tablecontainer');
+window.onkeydown = function (event) {
+  if (event.keyCode === 32) {
+      event.preventDefault();
+  }
+};
+// IDEA: is this really needed?
+// const map = document.querySelector('.table-container');
 
 const LIFE_PORTION = Math.floor(Math.random() * 25);
 
@@ -8,13 +14,21 @@ class Player {
   }
 
   move(where) {
+<<<<<<< HEAD
     if (!where || where.classList.contains("map-wall")) {
+=======
+    if (!where || where.classList.contains("map__tile--wall")) {
+>>>>>>> bc659dbd1080d1982a7761ba9398795d5939f5d8
       return;
     }
 
     this.element.classList.remove('player');
     where.classList.add("player");
+<<<<<<< HEAD
     aplle();
+=======
+    apple();
+>>>>>>> bc659dbd1080d1982a7761ba9398795d5939f5d8
   }
 
   handleMove(direction) {
@@ -68,11 +82,19 @@ monsters.forEach(monster => {
       monster.domElement.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
       monster.domElement.previousElementSibling.classList.contains('player') ||
       monster.domElement.nextElementSibling.classList.contains('player')
+<<<<<<< HEAD
     ) {
 
       life -= LIFE_PORTION;
       renderLife()
 
+=======
+    ) { 
+      if (life > 0) {
+        life -= Math.floor(Math.random() * 10) +1;
+        renderLifeBar()
+      }
+>>>>>>> bc659dbd1080d1982a7761ba9398795d5939f5d8
     } else {
       return;
     }
@@ -102,20 +124,35 @@ const playerAttack = () => {
       console.log(monster)
       if (monster.life === 0) {
         monster.domElement.classList.remove("monster");
+<<<<<<< HEAD
         clearInterval(monster.intervalId);
         monsters.filter(monster => monster.live > 0)
       }
 
+=======
+        monster.domElement.classList.remove("map__tile--wall");
+        clearInterval(monster.intervalId);
+        monsters.filter(monster => monster.life > 0)
+      }
+>>>>>>> bc659dbd1080d1982a7761ba9398795d5939f5d8
     }
   })
 }
 
 
+<<<<<<< HEAD
 const applePosition = document.querySelector(".apple");
 const aplle = () => {
   if (applePosition.classList.contains("player")) {
     heal();
     applePosition.classList.remove("apple")
+=======
+const applePosition = document.querySelector(".map__item--apple");
+const apple = () => {
+  if (applePosition.classList.contains("player")) {
+    heal();
+    applePosition.classList.remove("map__item--apple")
+>>>>>>> bc659dbd1080d1982a7761ba9398795d5939f5d8
   } else {
     return;
   }
@@ -124,11 +161,16 @@ const aplle = () => {
 const heal = () => {
   life += 50;
   if (life > 100) life = 100;
+<<<<<<< HEAD
   renderLife();
+=======
+  renderLifeBar();
+>>>>>>> bc659dbd1080d1982a7761ba9398795d5939f5d8
 }
 
 let life = 100;
 
+<<<<<<< HEAD
 function renderLife() {
   const heart = document.createElement('img');
   heart.src = "tiles/heart.png";
@@ -142,6 +184,23 @@ function renderLife() {
     lifeBar.innerHTML = '0%';
     lifeBar.appendChild(heart);
     // alert("Your smelly corpse is rotting in dungeon, better luck next time!");
+=======
+const lifeBar = document.getElementById('life__display--bar');
+const lifeCurrentLevel = document.getElementById('life__display--currentLevel');
+
+//IDEA - let lifePortion = 1;
+//IDEA - funkcja changeLife zamiast heal i utraty życia w monsterze
+
+function renderLifeBar() {
+  lifeBar.style.width = `${life}%`;
+  lifeCurrentLevel.innerHTML = '';
+  if (life > 0) {
+    lifeCurrentLevel.appendChild(document.createTextNode(` ${life}%`));
+  } else {
+    lifeCurrentLevel.appendChild(document.createTextNode(` 0%`));
+    displayGameOverModal();
+    return;
+>>>>>>> bc659dbd1080d1982a7761ba9398795d5939f5d8
   };
 };
 
@@ -161,11 +220,85 @@ document.addEventListener('keydown', (e) => {
 
       break;
   }
+<<<<<<< HEAD
 });
 
 
 
 
+=======
+});
+
+
+// Modal
+
+const victoryModal = document.getElementById("myVictoryModal");
+function displayVictoryModal() {
+  victoryModal.style.display = "block";
+}
+
+const gameOverModal = document.getElementById("myGameOverModal");
+function displayGameOverModal() {
+  gameOverModal.style.display = "block";
+}
+
+
+// Chest animation
+// warto dodatkowo zatrzymac wszystkie zbedne skrypty?
+
+
+const spriteSheet = document.getElementById("map__item--sprite--img");
+const widthOfChestSpriteSheet = 100;
+const widthOfEachChestSprite = 50;
+
+
+function startAnimation() {
+  let position = widthOfEachChestSprite; //start position for the image
+  const diff = widthOfEachChestSprite; //difference between two sprites
+  const speed = 1500;
+  spriteSheet.style.backgroundPosition = `-${position}px 0px`;
+
+
+  setTimeout(function () {
+    if (position < widthOfChestSpriteSheet) {
+      position = 0;
+    } else {
+      position = position + diff;
+    }
+  }, speed);
+
+  setTimeout(displayVictoryModal, 1000);
+}
+
+// Open chest & show score in Modal
+//bug: when you press space multiple times quickly before modal shows it will display multiplication of score i.e. "320003200032000"
+// fix bug = zrob ze score tablice i wyswietlaj pierwszy element
+// zaimplementuj strone ta - nowastrona.htlm i reszte tych plikow
+//zrob obrazki jablka i potworow (wyczysc je z tla) a jablko ogarnij zeby byl sprite i zeby sie obracalo
+
+const scoreParagraph = document.getElementById("victoryModal__score");
+
+document.addEventListener('keydown', (e) => {
+  const playerPosition = document.querySelector(".player");
+  const index = [...playerPosition.parentElement.children].indexOf(playerPosition);
+  let scanForThreats = document.getElementsByClassName("monster").length;
+  let score = life * 1000;
+  switch (e.keyCode) {
+    case 32:
+
+      if (scanForThreats === 0 && (playerPosition.previousElementSibling.classList.contains("map__item--chest") ||
+        playerPosition.nextElementSibling.classList.contains("map__item--chest") ||
+        playerPosition.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("map__item--chest") ||
+        playerPosition.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("map__item--chest")
+      )) {
+        scoreParagraph.textContent += `${score}`;
+        startAnimation();
+      }
+      break;
+  }
+});
+
+>>>>>>> bc659dbd1080d1982a7761ba9398795d5939f5d8
 // const newMap = [
 //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
 //   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -218,6 +351,7 @@ document.addEventListener('keydown', (e) => {
 // we - wall edge
 // ww - water
 // wwb - water bucket
+<<<<<<< HEAD
 // 
 // 
 // 
@@ -307,3 +441,5 @@ document.addEventListener('keydown', (e) => {
 //     }
 //   }
 // })
+=======
+>>>>>>> bc659dbd1080d1982a7761ba9398795d5939f5d8

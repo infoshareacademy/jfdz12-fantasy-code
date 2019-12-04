@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <div>
+        <div id="life__container">
+            <div id="life__display--bar">
+                <div id="life__display--img">
+                    <img src="./img/heart.png" alt="heart" width="16em">
+                </div>
+                <div id="life__display--currentLevel">100%</div>
+            </div>
+        </div>
+        <table>
+            <tbody class="map__container">
+                <tr>
+                    <td class="map__cell map__tile--wall--top--left--corner"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--cross"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall--top--right--corner"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--lamp"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--door"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--lamp"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--lamp"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--lamp"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor player"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor monster map__tile--wall"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--wet"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--canal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--wet"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor map__item--chest map__tile--wall">
+                        <div>
+                            <div id="map__item--sprite--img"></div>
+                        </div>
+                    </td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--hole"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--end--left"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--split"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--end--right"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--hole"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--cross"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--end--right"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--lamp"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water--bucket"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor monster map__tile--wall"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--end--top"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--hole"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--edge"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--edge"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--drain"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--edge"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--sewer"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor monster map__tile--wall"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--hole"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--end--left"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--top--right--corner"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water--bucket"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--water"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--end--top"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--hole"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical "></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--hole"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--bottom--left--corner"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--split"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--top--right--corner"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--lamp"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--lamp"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--lamp"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--lamp"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor map__item--apple"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--sewer"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--hole"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--sewer"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--end--left"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--split"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--end--right"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor monster map__tile--wall"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--lamp"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--lamp "></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--img--lamp "></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--end--top"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--hole"></td>
+                    <td class="map__cell map__tile--floor monster map__tile--wall"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--hole"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor--diff"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--floor"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--vertical"></td>
+                </tr>
+                <tr>
+                    <td class="map__cell map__tile--wall map__tile--wall--bottom--left--corner"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--split"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--horizontal"></td>
+                    <td class="map__cell map__tile--wall map__tile--wall--bottom--right--corner"></td>
+                </tr>
+
+                <!-- The Victory Modal -->
+                <div id="myVictoryModal" class="victoryModal">
+
+                    <!-- Modal content -->
+                    <div class="victoryModal__content">
+                        <p>Victory!</p>
+                        <p>Dear Adventurer! You have completed the quest, rejoice!</p>
+                        <p id="victoryModal__score">Your score: </p>
+                        <a href="./game.html" class="victoryModal__button--next">Adventure Deeper</a>
+                        <a href="../index.html" class="victoryModal__button--home">Take Portal to Town</a>
+                    </div>
+                </div>
+
+                <!-- The GameOver Modal -->
+                <div id="myGameOverModal" class="gameOverModal">
+
+                    <!-- Modal content -->
+                    <div class="gameOverModal__content">
+                        <p>You are dead!</p>
+                        <p>Better luck next time!</p>
+                        <a href="./game.html" class="gameOverModal__button--next">Try again</a>
+                        <a href="../index.html" class="gameOverModal__button--home">Take Portal to Town</a>
+                    </div>
+                </div>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
