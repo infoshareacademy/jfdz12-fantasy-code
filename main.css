@@ -82,7 +82,7 @@ a:acitve {
 }
 
 .hero {
-    background-image: url('/img/banner.jpg');
+    background-image: url('/img/banner-small.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -335,7 +335,6 @@ a:acitve {
     padding: 10px 60px;
 }
 
-
 /* Cookies */
 
 .cookies {
@@ -550,5 +549,68 @@ a:acitve {
     }
     .email {
         width: 80vw;
+    }
+}
+
+@media only screen and (min-width: 1462px) {
+    .inner {
+        background-image: none;
+    }
+}
+
+@media only screen and (max-width: 1451px) {
+    .inner {
+        height: 33vw;
+    }
+}
+
+@media only screen and (max-width: 1317px) {
+    .inner {
+        height: 39vw;
+    }
+}
+
+@media only screen and (max-width: 1119px) {
+    .inner {
+        height: 44vw;
+    }
+}
+
+@media only screen and (max-width: 989px) {
+    .inner {
+        height: 48vw;
+    }
+}
+
+@media only screen and (max-width: 908px) {
+    .inner {
+        height: 52vw;
+    }
+}
+
+@media only screen and (max-width: 836px) {
+    .inner {
+        height: 55vw;
+    }
+}
+
+@media only screen and (max-width: 796px) {
+    .inner {
+        height: 57vw;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .inner {
+        background-image: none;
+    }
+    .inner>h2 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .inner>h2 {
+        font-size: 2rem;
     }
 }
