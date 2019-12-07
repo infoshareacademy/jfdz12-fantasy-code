@@ -607,6 +607,12 @@ a:acitve {
     .inner>h2 {
         font-size: 3rem;
     }
+    .nav-menu .menu-icon {
+        padding: 23px 20px;
+    }
+    .nav-menu .logo {
+        padding: 10px 20px;
+    }
 }
 
 @media only screen and (max-width: 360px) {

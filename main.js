@@ -1,3 +1,10 @@
+const homeLink = document.getElementById('link-home');
+const list = document.getElementsByClassName('menu');
+
+
+
+
+
 const scrollTo= function(){
     let element = document.getElementById("hero");
 element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" });
