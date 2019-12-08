@@ -552,6 +552,7 @@ a:acitve {
     }
 }
 
+
 @media only screen and (min-width: 1462px) {
     .inner {
         background-image: none;
@@ -620,3 +621,4 @@ a:acitve {
         font-size: 2rem;
     }
 }
+

@@ -55,6 +55,7 @@ const cookiesShow = () => {
 cookiesShow();
 // end of cookieInfo
 
+
 const linksFromMenu = document.querySelectorAll('.menu a');
 const menu = document.querySelector('#menu-btn');
 const closeMenu = (item) => {
@@ -62,3 +63,4 @@ const closeMenu = (item) => {
 };
 
 linksFromMenu.forEach(link => link.addEventListener('click',()=>closeMenu(menu)));
+

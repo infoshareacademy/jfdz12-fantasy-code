@@ -1,239 +1,265 @@
-body{
+body {
     background-color:gray;
 }
 
-.mapcontainer{
-    border: 5px solid;
-}
-
-.tablecontainer{
+table {
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-table{
     border-spacing: 0px;
 }
-.map-wall{
-    background-color: black;
+
+.map__container {
+    border: 5px solid;
 }
-.map {
+
+.map__cell {
     width: 50px;
     height: 50px;
     min-width: 50px;
     min-height: 50px;
     background-color: gray; 
 }
-.map--floor{
+
+.map__tile--wall {
+    background-color: black;
+}
+
+.map__tile--floor {
     background-image: url(tiles/floor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* position: relative; */
 }
-.map--floor--diff{
+
+.map__tile--floor--diff {
     background-image: url(tiles/floor2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map--floor--hole{
+
+.map__tile--floor--hole {
     background-image: url(tiles/floor1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map--floor--sewer{
+
+.map__tile--floor--sewer {
     background-image: url(tiles/floor3.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.map_wall--image{
+.map__tile--wall--img {
     background-image: url(tiles/wall.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.map_wall--image--lamp{
+.map__tile--wall--img--lamp {
     background-image: url(tiles//wall1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--image--door{
+
+.map__tile--wall--img--door {
     background-image: url(tiles/wallDoor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_horizontal{
+
+.map__tile--wall--horizontal {
     background-image: url(tiles/wallH.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--vertical{
+
+.map__tile--wall--vertical {
     background-image: url(tiles/wallV.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_top_left--corner{
+
+.map__tile--wall--top--left--corner {
     background-image: url(tiles/wallCorner1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_top_right--corner{
+
+.map__tile--wall--top--right--corner {
     background-image: url(tiles/wallCorner2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.map_wall_end--down{
+.map__tile--wall--end--down {
     background-image: url(tiles/wallVEndDown.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;  
 }
-.map_wall_bottom_right--corner{
+
+.map__tile--wall--bottom--right--corner {
     background-image: url(tiles/wallCorner4.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_bottom_left--corner{
+
+.map__tile--wall--bottom--left--corner {
     background-image: url(tiles/wallCorner.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--split{
+
+.map__tile--wall--split {
     background-image: url(tiles/wallIntersectionUp.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_cross{
+
+.map__tile--wall--cross {
     background-image: url(tiles/wallIntersection.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_end--left{
+
+.map__tile--wall--end--left {
     background-image: url(tiles/wallHEndleft.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_end--right{
+
+.map__tile--wall--end--right {
     background-image: url(tiles/wallHEnd.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall_end--top{
+
+.map__tile--wall--end--top {
     background-image: url(tiles/wallVEndUp.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--canal{
+
+.map__tile--wall--canal {
     background-image: url(tiles/wallSuer.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--wet{
+
+.map__tile--wall--wet {
     background-image: url(tiles/wallWet.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--edge{
+
+.map__tile--wall--edge {
     background-image: url(tiles/wallWater.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--drain{
+
+.map__tile--wall--drain {
     background-image: url(tiles/wallCanal.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--water{
+
+.map__tile--wall--water {
     background-image: url(tiles/water.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.map_wall--water--bucket{
+
+.map__tile--wall--water--bucket {
     background-image: url(tiles/waterBucket.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.player{
+
+.player {
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
-.player:before{
-    content: url(tiles/knight.png);
+.player:before {
+    content: url(./img/knight.png);
     position: absolute;
     top: -41px;
     left: -23px;
     transform: scale(.7);
 }
-.monster{
-    background-image: url(tiles/orc.png), url(tiles/floor.png);
+
+.monster {
+    background-image: url(./img/orc.png), url(tiles/floor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-#game--life--container {
+
+#life__container {
     background-color: lightseagreen;
     border: solid 1px black;
     border-radius: 1rem;
     text-align: center;
     margin: 0.25rem;
     position: sticky;
-    top: 0;
- }
- #game--life--bar {
+    top: 0.5rem;
+}
+
+#life__display--bar {
     min-width: 5%;
     background-color: seagreen;
     padding: 0.5rem 0;
     border-radius: 1rem;
     transition-duration: 300ms;
- }
+}
 
-.apple{
-    background-image: url(tiles/applee.png),url(tiles/floor.png);
+#life__display--img, #life__display--currentLevel {
+    display: inline;
+}
+
+.map__item--apple {
+    background-image: url(./img/apple.png),url(tiles/floor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-#sprite-image {
+#map__item--sprite--img {
     height: 50px;
     width: 50px;
-    background: url("chests.png") 0px 0px;
+    background: url("./img/chests.png") 0px 0px;
 }
 
 /*  MODAL */
 
-
-
 /* The Modal (background) */
-.modal {
+.victoryModal {
     font-size: 20px;
     color: #ff9900;
     font-weight:800;
@@ -247,19 +273,19 @@ table{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
-  }
+}
   
-  /* Modal Content/Box */
-  .modal-content {
+/* Modal Content/Box */
+.victoryModal__content {
     background-color: #4d1300;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     text-align: center;
     border: 3px solid #ff9900;
     width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  .button-next {
+}
+
+.victoryModal__button--next {
     background-color: #e01507;
     border: none;
     color: white;
@@ -270,9 +296,9 @@ table{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
-  
-  .button-home {
+}
+
+.victoryModal__button--home {
     background-color: #0761e0;
     border: none;
     color: white;
@@ -283,12 +309,9 @@ table{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
+}
 
-
-  /*  GAME OVER MODAL */
-
-
+/*  GAME OVER MODAL */
 
 /* The Modal (background) */
 .gameOverModal {
@@ -305,19 +328,19 @@ table{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .gameOverModal-content {
+}
+
+/* Modal Content/Box */
+.gameOverModal__content {
     background-color: #4d1300;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     text-align: center;
     border: 3px solid #ff9900;
     width: 80%; /* Could be more or less, depending on screen size */
-  }
+}
   
-  .button-next {
+.gameOverModal__button--next {
     background-color: #e01507;
     border: none;
     color: white;
@@ -328,9 +351,9 @@ table{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
-  
-  .button-home {
+}
+
+.gameOverModal__button--home {
     background-color: #0761e0;
     border: none;
     color: white;
@@ -341,4 +364,4 @@ table{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
+}
