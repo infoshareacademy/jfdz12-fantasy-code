@@ -26,175 +26,175 @@ table {
 }
 
 .map__tile--floor {
-    background-image: url(tiles/floor.png);
+    background-image: url(./tiles/floor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--floor--diff {
-    background-image: url(tiles/floor2.png);
+    background-image: url(./tiles/floor2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--floor--hole {
-    background-image: url(tiles/floor1.png);
+    background-image: url(./tiles/floor1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--floor--sewer {
-    background-image: url(tiles/floor3.png);
+    background-image: url(./tiles/floor3.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--img {
-    background-image: url(tiles/wall.png);
+    background-image: url(./tiles/wall.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--img--lamp {
-    background-image: url(tiles//wall1.png);
+    background-image: url(./tiles//wall1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--img--door {
-    background-image: url(tiles/wallDoor.png);
+    background-image: url(./tiles/wallDoor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--horizontal {
-    background-image: url(tiles/wallH.png);
+    background-image: url(./tiles/wallH.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--vertical {
-    background-image: url(tiles/wallV.png);
+    background-image: url(./tiles/wallV.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--top--left--corner {
-    background-image: url(tiles/wallCorner1.png);
+    background-image: url(./tiles/wallCorner1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--top--right--corner {
-    background-image: url(tiles/wallCorner2.png);
+    background-image: url(./tiles/wallCorner2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--end--down {
-    background-image: url(tiles/wallVEndDown.png);
+    background-image: url(./tiles/wallVEndDown.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;  
 }
 
 .map__tile--wall--bottom--right--corner {
-    background-image: url(tiles/wallCorner4.png);
+    background-image: url(./tiles/wallCorner4.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--bottom--left--corner {
-    background-image: url(tiles/wallCorner.png);
+    background-image: url(./tiles/wallCorner.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--split {
-    background-image: url(tiles/wallIntersectionUp.png);
+    background-image: url(./tiles/wallIntersectionUp.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--cross {
-    background-image: url(tiles/wallIntersection.png);
+    background-image: url(./tiles/wallIntersection.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--end--left {
-    background-image: url(tiles/wallHEndleft.png);
+    background-image: url(./tiles/wallHEndleft.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--end--right {
-    background-image: url(tiles/wallHEnd.png);
+    background-image: url(./tiles/wallHEnd.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--end--top {
-    background-image: url(tiles/wallVEndUp.png);
+    background-image: url(./tiles/wallVEndUp.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--canal {
-    background-image: url(tiles/wallSuer.png);
+    background-image: url(./tiles/wallSuer.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--wet {
-    background-image: url(tiles/wallWet.png);
+    background-image: url(./tiles/wallWet.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--edge {
-    background-image: url(tiles/wallWater.png);
+    background-image: url(./tiles/wallWater.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--drain {
-    background-image: url(tiles/wallCanal.png);
+    background-image: url(./tiles/wallCanal.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--water {
-    background-image: url(tiles/water.png);
+    background-image: url(./tiles/water.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .map__tile--wall--water--bucket {
-    background-image: url(tiles/waterBucket.png);
+    background-image: url(./tiles/waterBucket.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -215,7 +215,7 @@ table {
 }
 
 .monster {
-    background-image: url(./img/orc.png), url(tiles/floor.png);
+    background-image: url(./img/orc.png), url(./tiles/floor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -244,7 +244,7 @@ table {
 }
 
 .map__item--apple {
-    background-image: url(./img/apple.png),url(tiles/floor.png);
+    background-image: url(./img/apple.png),url(./tiles/floor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
