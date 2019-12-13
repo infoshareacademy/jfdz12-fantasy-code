@@ -138,7 +138,7 @@ table {
 }
 
 .map__tile--wall--end--left {
-    background-image: url(./tiles/wallHEndleft.png);
+    background-image: url(./tiles/wallHEndLeft.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -159,7 +159,7 @@ table {
 }
 
 .map__tile--wall--canal {
-    background-image: url(./tiles/wallSuer.png);
+    background-image: url(./tiles/wallSewer.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
