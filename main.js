@@ -36,17 +36,17 @@ $('#link-extras').click(() => {
 });
 
 // Back to top button
-const btn = $('#button');
+const backToTopBtn = $('#button');
 
 $(window).scroll(function() {
   if ($(window).scrollTop() > 200) {
-    btn.addClass('show');
+    backToTopBtn.addClass('show');
   } else {
-    btn.removeClass('show');
+    backToTopBtn.removeClass('show');
   }
 });
 
-btn.on('click', function(e) {
+backToTopBtn.on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({
       scrollTop:0}, '300');
