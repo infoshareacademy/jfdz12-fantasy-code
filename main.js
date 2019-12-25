@@ -36,7 +36,7 @@ $('#link-extras').click(() => {
 });
 
 // Back to top button
-const backToTopBtn = $('#button');
+const backToTopBtn = $('#backToTopButton');
 
 $(window).scroll(function() {
   if ($(window).scrollTop() > 200) {

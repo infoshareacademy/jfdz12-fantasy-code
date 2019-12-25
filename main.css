@@ -26,7 +26,7 @@ a:acitve {
     color: white;
 }
 
-#button {
+#backToTopButton {
     display: inline-block;
     background-color: lightsalmon;
     width: 50px;
@@ -42,7 +42,7 @@ a:acitve {
     z-index: 1000;
 }
 
-#button::after {
+#backToTopButton::after {
     content: "\f077";
     font-family: FontAwesome;
     font-weight: normal;
@@ -51,16 +51,16 @@ a:acitve {
     color: #fff;
 }
 
-#button:hover {
+#backToTopButton:hover {
     cursor: pointer;
     background-color: #333;
 }
 
-#button:active {
+#backToTopButton:active {
     background-color: #555;
 }
 
-#button.show {
+#backToTopButton.show {
     opacity: 1;
     visibility: visible;
 }
