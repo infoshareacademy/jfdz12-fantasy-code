@@ -28,7 +28,7 @@ a:acitve {
 
 #button {
     display: inline-block;
-    background-color: #FF9800;
+    background-color: lightsalmon;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -47,7 +47,6 @@ a:acitve {
     font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
-    font-size: 2em;
     line-height: 50px;
     color: #fff;
 }
