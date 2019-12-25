@@ -35,6 +35,23 @@ $('#link-extras').click(() => {
     }, 500);
 });
 
+// Back to top button
+const btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 200) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({
+      scrollTop:0}, '300');
+});
+
 // cookieInfo
 const cookies = document.querySelector(".cookies");
 const cookiesYesBtn = document.querySelector(".cookies-btn-yes");
