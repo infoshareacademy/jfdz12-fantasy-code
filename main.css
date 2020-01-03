@@ -95,6 +95,14 @@ a:acitve {
     text-align: center;
 }
 
+.section {
+    border: 1px dashed black
+}
+
+.active {
+    background: red;
+}
+
 .section_container1 {
     background-color: antiquewhite;
 }
