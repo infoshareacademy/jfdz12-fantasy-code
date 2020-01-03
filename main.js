@@ -24,6 +24,12 @@ $('#link-authors').click(() => {
     }, 500);
 });
 
+$('#link-subscribe').click(() => {
+    $('html, body').animate({
+        scrollTop: $('#subscribe').offset().top-20
+    }, 500);
+});
+
 $('#link-extras').click(() => {
     $('html, body').animate({
         scrollTop: $('#extras').offset().top-20
