@@ -86,10 +86,8 @@ const sectionIdToNavigationLink = {};
 for (let i = $sections.length-1; i >= 0; i--) {
 	const id = $sections[i].id;
 	//console.log(`nav > ul > li > a[href='#${id}']`);
-	sectionIdToNavigationLink[id] = document.querySelectorAll(`nav > ul > li > a [href='#${id}']`) || null;
+	sectionIdToNavigationLink[id] = document.querySelectorAll(`nav > ul > li > a[href='#${id}']`) || null;
 }
-
-//ERROR: Object sectionIdToNavigationLink with proper keys, but null values
 
 // throttle function, enforces a minimum time interval
 function throttle(fn, interval) {
