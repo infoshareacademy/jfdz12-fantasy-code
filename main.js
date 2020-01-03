@@ -30,6 +30,23 @@ $('#link-extras').click(() => {
     }, 500);
 });
 
+// Back to top button
+const backToTopBtn = $('#top-btn');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 200) {
+    backToTopBtn.addClass('show');
+  } else {
+    backToTopBtn.removeClass('show');
+  }
+});
+
+backToTopBtn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({
+      scrollTop:0}, '300');
+});
+
 // cookieInfo
 const cookies = document.querySelector(".cookies");
 const cookiesYesBtn = document.querySelector(".cookies-btn-yes");
