@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Quest Board</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <!-- Menu -->
-
-    <!-- Hero -->
     <nav class="nav-menu">
-        <a href="/" class="logo">QuestBoard</a>
+        <a href="/" class="logo">Quest Board</a>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <label class="menu-icon" for="menu-btn">
+            <span class="navicon"></span>
+        </label>
         <ul class="menu">
             <li><a href="#hero" id="link-home">Home</a></li>
             <li><a href="#functions" id="link-functions">Functions</a></li>
@@ -26,8 +27,9 @@
             <li><a href="#extras" id="link-extras">Extras</a></li>
         </ul>
     </nav>
-    <section id="hero" class="section hero">
 
+    <!-- Hero -->
+    <section id="hero" class="section hero">
         <div class="herocon">
             <div class="hero-image"></div>
             <div class="inner">
@@ -35,9 +37,11 @@
                 <p>Meet fun people, Throw yourself into the action!</p>
             </div>
         </div>
-
     </section>
 
+    <!-- Back to top button -->
+    <a id="top-btn"></a>
+    
     <!-- Cookies -->
     <div class="cookies">
         <h4>This website uses cookies</h4>
@@ -56,37 +60,41 @@
     <section id="functions" class="section section_container1">
         <div class="container container_functions">
             <header class="section_header1">
-                <h2>Funkcje</h2>
-                <p>Oto wszystkie funkcje naszej appki
+                <h2>Functions</h2>
+                <p>
+                    Here's what you can enjoy at our site:
                 </p>
             </header>
             <div class="function-divs">
                 <div class="function">
-                    <div class="function-img function-img-1"><img class="function-img-icon" src="/icons/hammer2.png"
-                            alt="sa" /></div>
+                    <div class="function-img function-img-1">
+                        <img class="function-img-icon" src="/icons/hammer2.png" alt="Choose game"/>
+                    </div>
                     <h2>Choose game</h2>
                     <p>Use the list of most popular games, or add one by your own.</p>
                 </div>
                 <div class="function">
-                    <div class="function-img function-img-2"><img class="function-img-icon" src="/icons/beer2.png"
-                            alt="sa" /></div>
+                    <div class="function-img function-img-2">
+                        <img class="function-img-icon" src="/icons/beer2.png" alt="Gather players"/>
+                    </div>
                     <h2>Gather players</h2>
                     <p>Decide how many and what sort of players you are looking for.</p>
                 </div>
                 <div class="function">
-                    <div class="function-img function-img-3"><img class="function-img-icon" src="/icons/dagger2.png"
-                            alt="sa" /></div>
+                    <div class="function-img function-img-3">
+                        <img class="function-img-icon" src="/icons/dagger2.png" alt="Fix place and date"/>
+                    </div>
                     <h2>Fix place and date</h2>
                     <p>Select location, date and time of your desired game session.</p>
                 </div>
                 <div class="function">
-                    <div class="function-img function-img-4"><img class="function-img-icon" src="/icons/staff2.png"
-                            alt="sa" /></div>
+                    <div class="function-img function-img-4">
+                        <img class="function-img-icon" src="/icons/staff2.png" alt="Reserve table"/>
+                    </div>
                     <h2>Reserve table</h2>
                     <p>Select a venue and reserve a table.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -94,29 +102,30 @@
     <section id="authors" class="section section_container2">
         <div class="container container_authors">
             <header class="section_header2">
-                <h2>Autorzy</h2>
-                <p>Meet the men who play!
-                </p>
+                <h2>Authors</h2>
+                <p>Meet the men who play!</p>
             </header>
+            
             <div class="authors-divs">
-
                 <div class="author-card">
                     <div class="author-card-inner">
                         <div class="author-card-front">
-                            <div class="function-img function-img-2"><img class="function-img-icon"
-                                    src="/icons/staff2.png" alt="sa" /></div>
+                            <div class="function-img function-img-2">
+                                <img class="function-img-icon" src="/icons/staff2.png" alt="Karol Nogal"/>
+                            </div>
                             <p>Karol Nogal</p>
                         </div>
                         <div class="author-card-back">
-                            <p>frontend dev + paramedic + gamer<br><br>=<br><br> best healer you can imagine !</p>
+                            <p>Frontend dev + paramedic + gamer<br><br>=<br><br>best healer you can imagine!</p>
                         </div>
                     </div>
                 </div>
                 <div class="author-card">
                     <div class="author-card-inner">
                         <div class="author-card-front">
-                            <div class="function-img function-img-2"><img class="function-img-icon"
-                                    src="/icons/axe2.png" alt="sa" /></div>
+                            <div class="function-img function-img-2">
+                                <img class="function-img-icon" src="/icons/axe2.png" alt="Maksymilian Tarnoruda"/>
+                            </div>
                             <p>Maksymilian Tarnoruda</p>
                         </div>
                         <div class="author-card-back">
@@ -127,21 +136,21 @@
                 <div class="author-card">
                     <div class="author-card-inner">
                         <div class="author-card-front">
-                            <div class="function-img function-img-2"><img class="function-img-icon"
-                                    src="/icons/sickle2.png" alt="sa" /></div>
+                            <div class="function-img function-img-2">
+                                <img class="function-img-icon" src="/icons/sickle2.png" alt="Piotr Andrzej Bochenek"/>
+                            </div>
                             <p>Piotr Andrzej Bochenek</p>
                         </div>
                         <div class="author-card-back">
-                            <p>Juggler, programist/economist & dedicated Settler of Catan. Always proudly carrying a
-                                logic flag into every
-                                fierce battle against dices!</p>
+                            <p>Juggler, economist turned programist & dedicated Settler of Catan. Always proudly carrying a
+                                logic flag in every battle against dices!</p>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
+
     <!-- Subscribe -->
     <section id="subscribe" class="section section_container1">
 
@@ -151,13 +160,11 @@
                     Subscribe to be first one on board !
                 </h2>
                 <p class="section-subscribe-text">
-                    Only one email will be sent with specific information about release date and premiere of
-                    QuestBoard.
-                    Your privacy is realy important for us , so in order to protect it no personal informaion will
-                    be
-                    collected.
+                    Only one email will be sent with specific information about release date and premiere of QuestBoard.
+                    Your privacy is realy important for us, so in order to protect it no personal informaion will be collected.
                 </p>
             </div>
+            
             <div class="subscribe-inputs">
                 <form action="/game/game.html">
                     <div class="subscribe-mail">
@@ -167,14 +174,14 @@
                     <div class="subscribe-terms">
                         <label class="check_box" for="check">
                             <input class="check-box" type="checkbox" name="Privacy policy" required>I have read and
-                            accepted the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+                            accepted the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a>
                         </label>
                     </div>
                 </form>
-
             </div>
         </div>
     </section>
+
     <!-- Extras -->
     <section id="extras" class="section section_container2">
         <div class="container container_extras">
@@ -184,73 +191,70 @@
             </header>
             <div class="extras-divs">
                 <div class="extra">
-                    <div class="function-img function-img-4"><img class="function-img-icon" src="/icons/bow2.png"
-                            alt="sa" /></div>
-                    <h3>Search Feature</h3>
+                    <div class="function-img function-img-4">
+                        <img class="function-img-icon" src="/icons/bow2.png" alt="Search feature"/>
+                    </div>
+                    <h3>Search feature</h3>
                     <p>
                         Our mobile app gives you a handy search bar so that you can find the content you need quickly.
                     </p>
                 </div>
                 <div class="extra">
-                    <div class="function-img function-img-1"><img class="function-img-icon" src="/icons/axe2.png"
-                            alt="sa" /></div>
+                    <div class="function-img function-img-1">
+                        <img class="function-img-icon" src="/icons/axe2.png" alt="Social media"/>
+                    </div>
                     <h3>Social Media</h3>
                     <p>
                         Social media networking - get in touch with your fellowship.
                     </p>
                 </div>
                 <div class="extra">
-                    <div class="function-img function-img-2"><img class="function-img-icon" src="/icons/bow2.png"
-                            alt="sa" /></div>
+                    <div class="function-img function-img-2">
+                        <img class="function-img-icon" src="/icons/code2.png" alt="Responsive design"/>
+                    </div>
                     <h3>Responsive Design</h3>
                     <p>
                         Responsive mobile app design for varying screen sizes.
                     </p>
                 </div>
                 <div class="extra">
-                    <div class="function-img function-img-3"><img class="function-img-icon" src="/icons/hatchet2.png"
-                            alt="sa" /></div>
+                    <div class="function-img function-img-3">
+                        <img class="function-img-icon" src="/icons/hatchet2.png" alt="Rate your party"/>
+                    </div>
                     <h3>Rate your party</h3>
                     <p>
                         You are given possibility to rate other players, so you always end up with equally nice people.
                     </p>
                 </div>
                 <div class="extra">
-                    <div class="function-img function-img-4"><img class="function-img-icon" src="/icons/staff2.png"
-                            alt="sa" /></div>
+                    <div class="function-img function-img-4">
+                        <img class="function-img-icon" src="/icons/staff2.png" alt="Snapchat adventure"/>
+                    </div>
                     <h3>Adventure in Snapchat</h3>
                     <p>
                         Staying with Snapchat and the wonders of augmented reality, gear up your crew with fantasy
-                        equipment and let
-                        the world see you.
+                        equipment and let the world see you.
                     </p>
                 </div>
                 <div class="extra">
-                    <div class="function-img function-img-1"><img class="function-img-icon" src="/icons/hammer2.png"
-                            alt="sa" /></div>
+                    <div class="function-img function-img-1">
+                        <img class="function-img-icon" src="/icons/hammer2.png" alt="Honor tokens"/>
+                    </div>
                     <h3>Earn Honor Tokens</h3>
                     <p>
                         To be exchanged at beverage of choice in our partnership locals!
                     </p>
                 </div>
                 <div class="extra">
-                    <div class="function-img function-img-2"><img class="function-img-icon" src="/icons/shield2.png"
-                            alt="sa" /></div>
-                    <h3>World builder</h3>
-                    <p>
-                        We want to hear your suggestion how to create better gaming experience.
-                    </p>
-                </div>
-                <div class="extra">
-                    <div class="function-img function-img-3"><img class="function-img-icon" src="/icons/dagger2.png"
-                            alt="sa" /></div>
+                    <div class="function-img function-img-2">
+                        <img class="function-img-icon" src="/icons/shield2.png" alt="World builder"/>
+                    </div>
                     <h3>World builder</h3>
                     <p>
                         We want to hear your suggestion how to create better gaming experience.
                     </p>
                 </div>
             </div>
-
         </div>
     </section>
 
