@@ -1,15 +1,10 @@
 const homeLink = document.getElementById('link-home');
 const list = document.getElementsByClassName('menu');
 
-
-
-
-
-const scrollTo= function(){
+const scrollTo = function() {
     let element = document.getElementById("hero");
 element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" });
 };
-
 
 $('#link-home').click(() => {
     $('html, body').animate({
@@ -40,21 +35,19 @@ const cookies = document.querySelector(".cookies");
 const cookiesYesBtn = document.querySelector(".cookies-btn-yes");
 const cookiesNoBtn = document.querySelector(".cookies-btn-no");
 const cookiesShow = () => {
-    console.log(document.cookie)
    if (!document.cookie) {
        cookies.style.display = "block";
        cookiesYesBtn.addEventListener("click", () => {
            document.cookie = "Info = cookies";
            cookies.style.display = "none";
-       })
+       });
        cookiesNoBtn.addEventListener("click", () => {
-           alert("Sorry! You must accept!")
-       })
-   }
+           alert("Sorry! You must accept!");
+       });
+   };
 };
 cookiesShow();
 // end of cookieInfo
-
 
 const linksFromMenu = document.querySelectorAll('.menu a');
 const menu = document.querySelector('#menu-btn');
@@ -62,5 +55,4 @@ const closeMenu = (item) => {
   item.checked = false;
 };
 
-linksFromMenu.forEach(link => link.addEventListener('click',()=>closeMenu(menu)));
-
+linksFromMenu.forEach(link => link.addEventListener('click',() => closeMenu(menu)));

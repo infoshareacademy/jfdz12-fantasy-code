@@ -9,13 +9,6 @@ body {
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-/* ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-evenly;
-} */
-
 a {
     text-decoration: none;
     color: white;
@@ -41,41 +34,6 @@ a:acitve {
     font-size: 5rem;
     color: white;
 }
-
-/* .inner::after {
-    content: "";
-    background-image: url(dice.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.5;
-    z-index: -1;   
-  } */
-
-/* .menu {
-    width: 100vw;
-    background-color: black;
-    position: -webkit-sticky;
-    position: fixed;
-    top: 0;
-    display: flex;
-}
-
-.menu-item {
-    margin: 0.25rem 1rem;
-    width: 100%;
-}
-
-.menu>h1 {
-    font-size: inherit;
-}
-
-.menu>div>ul {
-    margin: 0;
-}
-
-.menu>div>ul>li {
-    display: inline-block;
-} */
 
 #header {
     z-index: 1;
@@ -137,10 +95,6 @@ a:acitve {
     background-image: url(/img/pic04.jpg);
 }
 
-/* .function-img-icon {
-    
-} */
-
 .function-divs, .authors-divs, .extras-divs {
     display: flex;
     flex-direction: row;
@@ -154,7 +108,6 @@ a:acitve {
     width: 300px;
     min-height: 400px;
     border-radius: 5px;
-    /* overflow: hidden; */
 }
 
 .function>p, .author>p, .extra>p {
@@ -188,7 +141,6 @@ a:acitve {
 
 .subscribe-mail {
     margin-bottom: 1rem;
-    ;
 }
 
 .subscribe-terms a {
@@ -233,7 +185,6 @@ a:acitve {
 
 .footer {
     font-family: 'Varela Round', sans-serif;
-    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;
@@ -241,7 +192,6 @@ a:acitve {
     color: white;
     text-align: center;
     padding: 20px 0;
-    /* margin-top: -200px; */
     clear: both;
     position: relative;
     margin-top: 60px;
@@ -260,18 +210,6 @@ a:acitve {
     margin: 0 1px;
 }
 
-/*  SPIN */
-
-/* .author {
-    transition: 1s linear;
-}
-
-.author:hover {
-    transform: rotateY(180deg);
-} */
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-
 .author-card {
     width: 300px;
     height: 400px;
@@ -280,7 +218,6 @@ a:acitve {
     background-color: transparent;
     transition: 1s linear;
     perspective: 1000px;
-    /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
@@ -418,7 +355,7 @@ a:acitve {
 
 .nav-menu .menu-icon {
     cursor: pointer;
-    display: inline-block;
+    display: block;
     float: right;
     padding: 38px 30px;
     position: relative;
@@ -621,4 +558,3 @@ a:acitve {
         font-size: 2rem;
     }
 }
-
