@@ -3,20 +3,18 @@ window.onkeydown = function (event) {
       event.preventDefault();
   }
 };
-// IDEA: is this really needed?
-// const map = document.querySelector('.table-container');
 
 const LIFE_PORTION = Math.floor(Math.random() * 25);
 
 class Player {
   constructor() {
     this.element = null;
-  }
+  };
 
   move(where) {
     if (!where || where.classList.contains("map__tile--wall")) {
       return;
-    }
+    };
 
     this.element.classList.remove('player');
     where.classList.add("player");
@@ -30,108 +28,97 @@ class Player {
       case 37:
         const prev = this.element.previousElementSibling;
         this.move(prev);
-
         break;
+
       case 39:
         const next = this.element.nextElementSibling;
         this.move(next);
-
         break;
+      
       case 38:
         const upwardsElement = this.element.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`);
         this.move(upwardsElement);
         break;
+
       case 40:
         const downwardElement = this.element.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`);
         this.move(downwardElement);
-
         break;
     };
-  }
-}
+  };
+};
 
 const player = new Player();
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', e => {
   player.handleMove(e.keyCode);
-  console.log(player);
 });
-
 
 const monsters = [...document.querySelectorAll('.monster')].map(el => {
   return {
     domElement: el,
     domElementIndex: [...el.parentElement.children].indexOf(el),
     life: 5,
-    intervalId: undefined
-  }
-})
-
+    intervalId: undefined,
+  };
+});
 
 monsters.forEach(monster => {
-  const index = [...monster.domElement.parentElement.children].indexOf(monster.domElement)
+  const index = [...monster.domElement.parentElement.children].indexOf(monster.domElement);
   const monsterAttackDirection = () => {
     if (monster.domElement.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
       monster.domElement.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains('player') ||
       monster.domElement.previousElementSibling.classList.contains('player') ||
       monster.domElement.nextElementSibling.classList.contains('player')
-    ) { 
+    ) {
       if (life > 0) {
-        life -= Math.floor(Math.random() * 10) +1;
-        renderLifeBar()
-      }
-    } else {
-      return;
-    }
-
-  }
-  monster.intervalId = setInterval(monsterAttackDirection, 1000)
-
+        life -= Math.floor(Math.random() * 10) + 1;
+        renderLifeBar();
+      };
+      } else {
+        return;
+      };
+    };
+  monster.intervalId = setInterval(monsterAttackDirection, 1000);
 });
-
 
 const playerAttack = () => {
   monsters.forEach(monster => {
     const player = document.querySelector(".player");
     const index = [...player.parentElement.children].indexOf(player);
 
-    if (
-      player.previousElementSibling === monster.domElement ||
+    if (player.previousElementSibling === monster.domElement ||
       player.nextElementSibling === monster.domElement ||
       player.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`) === monster.domElement ||
       player.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`) === monster.domElement
     ) {
-
       monster.life -= 1;
-      console.log(player.nextElementSibling)
-      console.log(player.previousElementSibling)
-      console.log(monster.life)
-      console.log(monster)
       if (monster.life === 0) {
         monster.domElement.classList.remove("monster");
         monster.domElement.classList.remove("map__tile--wall");
         clearInterval(monster.intervalId);
         monsters.filter(monster => monster.life > 0)
-      }
-    }
-  })
-}
-
+      };
+    };
+  });
+};
 
 const applePosition = document.querySelector(".map__item--apple");
 const apple = () => {
   if (applePosition.classList.contains("player")) {
     heal();
-    applePosition.classList.remove("map__item--apple")
+    applePosition.classList.remove("map__item--apple");
   } else {
     return;
-  }
-}
+  };
+};
 
 const heal = () => {
   life += 50;
-  if (life > 100) life = 100;
+  if (life > 100) {
+    life = 100;
+  };
   renderLifeBar();
-}
+};
 
 let life = 100;
 
@@ -139,7 +126,7 @@ const lifeBar = document.getElementById('life__display--bar');
 const lifeCurrentLevel = document.getElementById('life__display--currentLevel');
 
 //IDEA - let lifePortion = 1;
-//IDEA - funkcja changeLife zamiast heal i utraty życia w monsterze
+//IDEA - changeLife function instead of heal and loose life in monster
 
 function renderLifeBar() {
   lifeBar.style.width = `${life}%`;
@@ -153,46 +140,39 @@ function renderLifeBar() {
   };
 };
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', e => {
   const playerPosition = document.querySelector(".player");
   const index = [...playerPosition.parentElement.children].indexOf(playerPosition);
   switch (e.keyCode) {
     case 32:
-
       if (playerPosition.previousElementSibling.classList.contains("monster") ||
         playerPosition.nextElementSibling.classList.contains("monster") ||
         playerPosition.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster") ||
         playerPosition.parentElement.nextElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("monster")
-      )
-        playerAttack()
-
-
+      ) {
+        playerAttack();
+      };
       break;
-  }
+  };
 });
-
 
 // Modal
 
 const victoryModal = document.getElementById("myVictoryModal");
 function displayVictoryModal() {
   victoryModal.style.display = "block";
-}
+};
 
 const gameOverModal = document.getElementById("myGameOverModal");
 function displayGameOverModal() {
   gameOverModal.style.display = "block";
-}
-
+};
 
 // Chest animation
-// warto dodatkowo zatrzymac wszystkie zbedne skrypty?
-
 
 const spriteSheet = document.getElementById("map__item--sprite--img");
 const widthOfChestSpriteSheet = 100;
 const widthOfEachChestSprite = 50;
-
 
 function startAnimation() {
   let position = widthOfEachChestSprite; //start position for the image
@@ -200,34 +180,28 @@ function startAnimation() {
   const speed = 1500;
   spriteSheet.style.backgroundPosition = `-${position}px 0px`;
 
-
   setTimeout(function () {
     if (position < widthOfChestSpriteSheet) {
       position = 0;
     } else {
       position = position + diff;
-    }
+    };
   }, speed);
 
   setTimeout(displayVictoryModal, 1000);
-}
+};
 
 // Open chest & show score in Modal
-//bug: when you press space multiple times quickly before modal shows it will display multiplication of score i.e. "320003200032000"
-// fix bug = zrob ze score tablice i wyswietlaj pierwszy element
-// zaimplementuj strone ta - nowastrona.htlm i reszte tych plikow
-//zrob obrazki jablka i potworow (wyczysc je z tla) a jablko ogarnij zeby byl sprite i zeby sie obracalo
 
 const scoreParagraph = document.getElementById("victoryModal__score");
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', e => {
   const playerPosition = document.querySelector(".player");
   const index = [...playerPosition.parentElement.children].indexOf(playerPosition);
   let scanForThreats = document.getElementsByClassName("monster").length;
   let score = life * 1000;
   switch (e.keyCode) {
     case 32:
-
       if (scanForThreats === 0 && (playerPosition.previousElementSibling.classList.contains("map__item--chest") ||
         playerPosition.nextElementSibling.classList.contains("map__item--chest") ||
         playerPosition.parentElement.previousElementSibling.querySelector(`td:nth-child(${index + 1})`).classList.contains("map__item--chest") ||
@@ -235,10 +209,11 @@ document.addEventListener('keydown', (e) => {
       )) {
         scoreParagraph.textContent += `${score}`;
         startAnimation();
-      }
+      };
       break;
-  }
+  };
 });
+<<<<<<< HEAD
 
 
 // const newMap = [
@@ -293,3 +268,5 @@ document.addEventListener('keydown', (e) => {
 // we - wall edge
 // ww - water
 // wwb - water bucket
+=======
+>>>>>>> 577a3b77966063418983a6f4a3cf9e98a2609c23
