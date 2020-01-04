@@ -9,31 +9,31 @@ element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" }
 
 $('#link-home').click(() => {
     $('html, body').animate({
-        scrollTop: $('.hero').offset().top
+        scrollTop: $('.hero').offset().top,
     }, 500);
 });
 
 $('#link-functions').click(() => {
     $('html, body').animate({
-        scrollTop: $('#functions').offset().top-menuHeight
+        scrollTop: $('#functions').offset().top-menuHeight,
     }, 500);
 });
 
 $('#link-authors').click(() => {
     $('html, body').animate({
-        scrollTop: $('#authors').offset().top-menuHeight
+        scrollTop: $('#authors').offset().top-menuHeight,
     }, 500);
 });
 
 $('#link-subscribe').click(() => {
     $('html, body').animate({
-        scrollTop: $('#subscribe').offset().top-menuHeight
+        scrollTop: $('#subscribe').offset().top-menuHeight,
     }, 500);
 });
 
 $('#link-extras').click(() => {
     $('html, body').animate({
-        scrollTop: $('#extras').offset().top-menuHeight
+        scrollTop: $('#extras').offset().top-menuHeight,
     }, 500);
 });
 
@@ -45,7 +45,7 @@ $(window).scroll(function() {
     backToTopBtn.addClass('show');
   } else {
     backToTopBtn.removeClass('show');
-  }
+  };
 });
 
 backToTopBtn.on('click', function(e) {
@@ -79,7 +79,7 @@ const closeMenu = (item) => {
   item.checked = false;
 };
 
-linksFromMenu.forEach(link => link.addEventListener('click',()=>closeMenu(menu)));
+linksFromMenu.forEach(link => link.addEventListener('click',() => closeMenu(menu)));
 
 // Highlight active section in menu
 const $navigationLinks = document.querySelectorAll('nav > ul > li > a');
