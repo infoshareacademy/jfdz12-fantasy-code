@@ -92,6 +92,10 @@ a:acitve {
     text-align: center;
 }
 
+.active {
+    background: lightsalmon;
+}
+
 .section_container1 {
     background-color: antiquewhite;
 }
@@ -375,7 +379,7 @@ a:acitve {
 }
 
 .nav-menu li a:hover {
-    background-color: #131313;
+    background-color: #3F3F3F;
 }
 
 .nav-menu .logo {

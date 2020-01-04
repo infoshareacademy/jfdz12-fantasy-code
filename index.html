@@ -14,23 +14,23 @@
 
 <body>
     <!-- Menu -->
-
-    <!-- Hero -->
-    <nav class="nav-menu">
+    <nav id="nav-menu" class="nav-menu">
         <a href="/" class="logo">Quest Board</a>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn">
             <span class="navicon"></span>
         </label>
         <ul class="menu">
-            <li><a id="link-home">Home</a></li>
-            <li><a id="link-functions">Functions</a></li>
-            <li><a id="link-authors">Authors</a></li>
-            <li><a id="link-extras">Extras</a></li>
+            <li><a href="#hero" id="link-home" class="active">Home</a></li>
+            <li><a href="#functions" id="link-functions">Functions</a></li>
+            <li><a href="#authors" id="link-authors">Authors</a></li>
+            <li><a href="#subscribe" id="link-subscribe">Subscribe!</a></li>
+            <li><a href="#extras" id="link-extras">Extras</a></li>
         </ul>
     </nav>
 
-    <section class="hero">
+    <!-- Hero -->
+    <section id="hero" class="hero">
         <div class="herocon">
             <div class="hero-image"></div>
             <div class="inner">
@@ -153,7 +153,8 @@
     </section>
 
     <!-- Subscribe -->
-    <section id="subscribe" class="section_container1 ">
+    <section id="subscribe" class="section_container1">
+
         <div class="container section-subscribe ">
             <div class="section-subscribe-content">
                 <h2 class="section-subscribe-title">
@@ -161,7 +162,7 @@
                 </h2>
                 <p class="section-subscribe-text">
                     Only one email will be sent with specific information about release date and premiere of QuestBoard.
-                    Your privacy is realy important for us, so in order to protect it no personal informaion will be collected.
+                    Your privacy is realy important for us, so in order to protect it no personal information will be collected.
                 </p>
             </div>
             
@@ -260,14 +261,13 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <section id="footer-phrase">
-            Living, learning & leveling up one day at a time.
-        </section>
-        <section class="copyrights">
-            Handcrafted by us &#169; 2019 FantasyCode team
-            <img class="program-icon" src="/icons/code2.png" alt="code icon">
-            Web Design&Developement Students
-        </section>
+        <div id="footer-phrase">
+            Living, learning, & leveling up one day at a time.
+        </div>
+        <div class="copyrights">
+            Handcrafted by us &#169; 2019 fantasyCode team <img class="program-icon" src="/icons/code2.png"
+                alt="code icon"> Web Design&Developement Students
+        </div>
     </footer>
 
     <!-- jQuery -->
