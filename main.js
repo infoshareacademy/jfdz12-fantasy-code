@@ -1,5 +1,6 @@
 const homeLink = document.getElementById('link-home');
 const list = document.getElementsByClassName('menu');
+const menuHeight = document.getElementById('nav-menu').offsetHeight;
 
 const scrollTo = function() {
     let element = document.getElementById("hero");
@@ -14,25 +15,25 @@ $('#link-home').click(() => {
 
 $('#link-functions').click(() => {
     $('html, body').animate({
-        scrollTop: $('#functions').offset().top-20
+        scrollTop: $('#functions').offset().top-menuHeight
     }, 500);
 });
 
 $('#link-authors').click(() => {
     $('html, body').animate({
-        scrollTop: $('#authors').offset().top-20
+        scrollTop: $('#authors').offset().top-menuHeight
     }, 500);
 });
 
 $('#link-subscribe').click(() => {
     $('html, body').animate({
-        scrollTop: $('#subscribe').offset().top-20
+        scrollTop: $('#subscribe').offset().top-menuHeight
     }, 500);
 });
 
 $('#link-extras').click(() => {
     $('html, body').animate({
-        scrollTop: $('#extras').offset().top-20
+        scrollTop: $('#extras').offset().top-menuHeight
     }, 500);
 });
 
