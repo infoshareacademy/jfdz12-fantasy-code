@@ -1,5 +1,6 @@
 body {
     background-color:gray;
+    overflow: hidden;
 }
 
 table {
@@ -14,10 +15,10 @@ table {
 }
 
 .map__cell {
-    width: 50px;
-    height: 50px;
-    min-width: 50px;
-    min-height: 50px;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
     background-color: gray; 
 }
 
@@ -209,9 +210,9 @@ table {
 .player:before {
     content: url(./img/knight.png);
     position: absolute;
-    top: -41px;
+    top: -44px;
     left: -23px;
-    transform: scale(.7);
+    transform: scale(.6);
 }
 
 .monster {
