@@ -4,6 +4,8 @@ window.onkeydown = function (event) {
   }
 };
 
+const LIFE_PORTION = Math.floor(Math.random() * 25);
+
 class Player {
   constructor() {
     this.element = null;
