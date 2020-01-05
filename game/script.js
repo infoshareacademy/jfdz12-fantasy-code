@@ -171,8 +171,12 @@ function displayGameOverModal() {
 // Chest animation
 
 const spriteSheet = document.getElementById("map__item--sprite--img");
-const widthOfChestSpriteSheet = 100;
-const widthOfEachChestSprite = 50;
+let widthOfChestSpriteSheet = 90;
+let widthOfEachChestSprite = 45;
+if (window.innerHeight <= 800) {
+  widthOfChestSpriteSheet = 50;
+  widthOfEachChestSprite = 25;
+}
 
 function startAnimation() {
   let position = widthOfEachChestSprite; //start position for the image
@@ -181,6 +185,7 @@ function startAnimation() {
   spriteSheet.style.backgroundPosition = `-${position}px 0px`;
 
   setTimeout(function () {
+    //console.log(`jednostka miary ${position}`);
     if (position < widthOfChestSpriteSheet) {
       position = 0;
     } else {
