@@ -11,6 +11,8 @@ table {
 }
 
 .map__container {
+    /* height: 90%;
+    width: 90%; */
     border: 5px solid;
 }
 
@@ -252,8 +254,8 @@ table {
 }
 
 #map__item--sprite--img {
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     background: url("./img/chests.png") 0px 0px;
 }
 
@@ -366,3 +368,27 @@ table {
     margin: 4px 2px;
     cursor: pointer;
 }
+
+
+@media screen and (max-height: 800px) {
+    .map__cell {
+        width: 25px;
+        height: 25px;
+        min-width: 25px;
+        min-height: 25px;
+        background-color: gray; 
+    }
+    #map__item--sprite--img {
+        height: 25px;
+        width: 25px;
+        background: url("./img/chests--small.png") 0px 0px;
+        transform: scale(.5);
+    }
+    .player:before {
+        content: url(./img/knight.png);
+        position: absolute;
+        top: -44px;
+        left: -35px;
+        transform: scale(.4);
+    }
+  }
